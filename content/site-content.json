@@ -16,10 +16,17 @@
         "published": true
       },
       {
+        "id": "services",
+        "label": "Our Services",
+        "url": "#services",
+        "order": 3,
+        "published": true
+      },
+      {
         "id": "contact",
         "label": "Contact Us",
         "url": "#contact",
-        "order": 3,
+        "order": 4,
         "published": true
       }
     ]
@@ -156,6 +163,85 @@
         }
       ]
     }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive logistics and moving solutions tailored to your needs",
+    "description": "At Four Winds Worldwide, we provide a full range of domestic and international moving services. Our experienced team ensures your belongings are handled with the utmost care and professionalism.",
+    "servicesList": [
+      {
+        "title": "International Moves",
+        "icon": "🌐",
+        "description": "Worldwide relocation services with comprehensive door-to-door solutions. We handle all aspects of international shipping including customs clearance, documentation, and overseas coordination.",
+        "features": [
+          "Door-to-door service",
+          "Customs clearance assistance",
+          "International packing standards",
+          "Overseas coordination",
+          "Insurance options"
+        ]
+      },
+      {
+        "title": "Domestic Moves",
+        "icon": "🏘",
+        "description": "Local and nationwide moving services tailored to your needs. Whether you're moving across town or across the country, we ensure a smooth transition.",
+        "features": [
+          "Local and long-distance moving",
+          "Professional packing services",
+          "Furniture disassembly/assembly",
+          "Secure transportation",
+          "Flexible scheduling"
+        ]
+      },
+      {
+        "title": "Office Moves",
+        "icon": "🏛",
+        "description": "Professional business relocation with minimal downtime. We understand the importance of keeping your business running smoothly during the transition.",
+        "features": [
+          "After-hours moving available",
+          "IT equipment handling",
+          "Office furniture installation",
+          "Minimal business disruption",
+          "Project management"
+        ]
+      },
+      {
+        "title": "Secure Storage",
+        "icon": "🗄",
+        "description": "Climate-controlled storage facilities with 24/7 security. Short-term and long-term storage solutions for your household goods and business inventory.",
+        "features": [
+          "Climate-controlled units",
+          "24/7 security monitoring",
+          "Flexible rental terms",
+          "Easy access",
+          "Insurance available"
+        ]
+      },
+      {
+        "title": "Vehicle Transfer",
+        "icon": "🚚",
+        "description": "Safe and reliable vehicle shipping services worldwide. We transport cars, motorcycles, boats, and other vehicles with specialized equipment.",
+        "features": [
+          "Door-to-door auto transport",
+          "Enclosed and open carriers",
+          "International shipping",
+          "Vehicle tracking",
+          "Comprehensive insurance"
+        ]
+      },
+      {
+        "title": "Packing Services",
+        "icon": "📦",
+        "description": "Professional packing services using high-quality materials. Our expert packers ensure your items are protected for safe transportation.",
+        "features": [
+          "Full and partial packing",
+          "Quality packing materials",
+          "Fragile item specialists",
+          "Unpacking services",
+          "Custom crating"
+        ]
+      }
+    ]
   },
   "contact": {
     "title": "Get In Touch",
