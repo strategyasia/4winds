@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Four Winds Worldwide</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo-section">
+                <img src="../images/logo.jpg" alt="Four Winds Worldwide Logo" class="admin-logo">
+                <h1>Admin Panel</h1>
+                <p>Four Winds Worldwide CMS</p>
+            </div>
+
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+
+                <div id="error-message" class="error-message"></div>
+
+                <button type="submit" class="btn-login">Login</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Default credentials: admin / admin123</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

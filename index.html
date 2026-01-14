@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Winds Worldwide - Global Shipping Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Four Winds Worldwide Logo" class="logo-image">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#about" class="nav-link" onclick="showSection('about')">About Us</a></li>
+                    <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact Us</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home-section" class="section active">
+        <!-- Hero Section with Slider -->
+        <div class="hero">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="images/old-vintage-compass-ancient-map.jpg" alt="Global Logistics">
+                </div>
+                <div class="slide">
+                    <img src="images/traveling-items-arrangement-top-view.jpg" alt="Shipping Solutions">
+                </div>
+            </div>
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title" id="hero-title"></h1>
+                    <p class="hero-subtitle" id="hero-subtitle"></p>
+                    <a href="#contact" class="btn btn-primary" id="hero-cta" onclick="showSection('contact')"></a>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+            </div>
+        </div>
+
+        <!-- Removals Solutions Section -->
+        <div class="removals-section">
+            <div class="container">
+                <div class="removals-header">
+                    <h2 class="section-title" id="removals-title"></h2>
+                    <p class="removals-subtitle" id="removals-subtitle"></p>
+                </div>
+                <div class="removals-grid" id="removals-grid">
+                    <!-- Removals services will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="container">
+                <div class="stats-grid" id="stats-grid">
+                    <!-- Stats will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Background Section -->
+        <div class="map-section">
+            <div class="map-overlay"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="section">
+        <!-- Hero Section with Slider -->
+        <div class="hero">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="images/old-vintage-compass-ancient-map.jpg" alt="About Us">
+                </div>
+                <div class="slide">
+                    <img src="images/traveling-items-arrangement-top-view.jpg" alt="Our Story">
+                </div>
+            </div>
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="about-title"></h1>
+                    <p class="mission" id="about-mission"></p>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="about-story">
+                <h2 class="section-title">Our Story</h2>
+                <div id="about-story" class="story-content"></div>
+            </div>
+
+            <div class="values">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid" id="values-grid">
+                    <!-- Values will be loaded dynamically -->
+                </div>
+            </div>
+
+            <div class="team">
+                <h2 class="section-title" id="team-title"></h2>
+                <div class="team-grid" id="team-grid">
+                    <!-- Team members will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="section">
+        <!-- Hero Section with Slider -->
+        <div class="hero">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="images/old-vintage-compass-ancient-map.jpg" alt="Contact Us">
+                </div>
+                <div class="slide">
+                    <img src="images/traveling-items-arrangement-top-view.jpg" alt="Get in Touch">
+                </div>
+            </div>
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="contact-title"></h1>
+                    <p class="contact-subtitle" id="contact-subtitle"></p>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p id="company-phone"></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p id="company-email"></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Address</strong>
+                            <p id="company-address"></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">🕐</span>
+                        <div>
+                            <strong>Office Hours</strong>
+                            <p id="office-hours"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Service</option>
+                                <option value="ocean">Ocean Freight</option>
+                                <option value="air">Air Freight</option>
+                                <option value="ground">Ground Transportation</option>
+                                <option value="warehouse">Warehousing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="contact-map-section">
+                <div class="map-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 id="footer-company-name"></h4>
+                    <p id="footer-tagline"></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                        <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p id="footer-phone"></p>
+                    <p id="footer-email"></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span id="footer-company"></span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+{
+  "navigation": {
+    "menuItems": [
+      {
+        "id": "home",
+        "label": "Home",
+        "url": "#home",
+        "order": 1,
+        "published": true
+      },
+      {
+        "id": "about",
+        "label": "About Us",
+        "url": "#about",
+        "order": 2,
+        "published": true
+      },
+      {
+        "id": "contact",
+        "label": "Contact Us",
+        "url": "#contact",
+        "order": 3,
+        "published": true
+      }
+    ]
+  },
+  "sliders": {
+    "images": [
+      {
+        "id": "slider1",
+        "url": "images/old-vintage-compass-ancient-map.jpg",
+        "alt": "Global Logistics",
+        "order": 1,
+        "published": true
+      },
+      {
+        "id": "slider2",
+        "url": "images/traveling-items-arrangement-top-view.jpg",
+        "alt": "Shipping Solutions",
+        "order": 2,
+        "published": true
+      }
+    ]
+  },
+  "imageLibrary": [],
+  "company": {
+    "name": "Four Winds Worldwide",
+    "tagline": "Your Global Shipping Partner",
+    "logo": "images/logo.png",
+    "phone": "(+60)12202-2719",
+    "email": "edgar@nationalfreightconsortium.com",
+    "address": "123 Harbor Drive, Port City, PC 12345"
+  },
+  "home": {
+    "hero": {
+      "title": "Global Logistics Solutions",
+      "subtitle": "Fast, Reliable, and Efficient Shipping Services Worldwide",
+      "cta": "Get a Quote"
+    },
+    "removals": {
+      "title": "Domestic & International Removals Solutions",
+      "subtitle": "Four Winds Worldwide offers excellence to each of its clients.",
+      "services": [
+        {
+          "icon": "🌐",
+          "title": "International Moves",
+          "description": "Worldwide relocation services with comprehensive door-to-door solutions"
+        },
+        {
+          "icon": "🏘",
+          "title": "Domestic Moves",
+          "description": "Local and nationwide moving services tailored to your needs"
+        },
+        {
+          "icon": "🏛",
+          "title": "Office Moves",
+          "description": "Professional business relocation with minimal downtime"
+        },
+        {
+          "icon": "🗄",
+          "title": "Secure Storage",
+          "description": "Climate-controlled storage facilities with 24/7 security"
+        },
+        {
+          "icon": "🚚",
+          "title": "Vehicle Transfer",
+          "description": "Safe and reliable vehicle shipping services worldwide"
+        }
+      ]
+    },
+    "stats": [
+      {
+        "number": "25+",
+        "label": "Years Experience"
+      },
+      {
+        "number": "10K+",
+        "label": "Shipments Delivered"
+      },
+      {
+        "number": "50+",
+        "label": "Countries Served"
+      },
+      {
+        "number": "98%",
+        "label": "Customer Satisfaction"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Four Winds Worldwide",
+    "mission": "Our mission is to provide world-class logistics solutions that connect businesses globally with speed, reliability, and exceptional service.",
+    "story": [
+      "Four Winds Worldwide Sdn. Bhd. was established in 2001. The company was incorporated with the big names of the industry who have been in the total logistics business for more than 30 years.",
+      "Having these prominent and experienced people, Four Winds Worldwide set out to firmly root itself as a global player in International Household Goods Moving and the Commercial cargo business.",
+      "In this website, you will see the wealth of experience these individuals bring to the table in the logistics world. Our expertise ranges from International Moving to Ship Chartering, Air Cargo Charter, Project Cargo and e-commerce logistics.",
+      "The company appointed Edgar Stephen Pereira as the CEO to head the International Moving division. Edgar who was the founder of AGS Four Winds International in Malaysia, sold his business to AGS France in 2012. Having had a long career in building one of the largest moving companies in Malaysia, he accepted the offer to build Four Winds Worldwide into an international moving company brand after serving his non-competition period.",
+      "What sets us apart from our competitors is our approach to international moving of personal & household effects. This is reflected through our very personalized attention to detail on the customers' requirements. The persons behind each move pride themselves with their experience in the industry, having worked with some of the big names in the industry.",
+      "Whatever the moving services might be, no move is too big or too small at Four Winds Worldwide Sdn.Bhd. Request an affordable moving quote today."
+    ],
+    "values": [
+      {
+        "title": "Reliability",
+        "description": "We deliver on our promises, ensuring your cargo arrives safely and on time, every time."
+      },
+      {
+        "title": "Innovation",
+        "description": "We leverage cutting-edge technology to provide efficient, transparent logistics solutions."
+      },
+      {
+        "title": "Customer Focus",
+        "description": "Your success is our success. We tailor our services to meet your unique business needs."
+      },
+      {
+        "title": "Global Network",
+        "description": "Our extensive network of partners spans across 50+ countries, providing seamless worldwide coverage."
+      }
+    ],
+    "team": {
+      "title": "Our Leadership Team",
+      "members": [
+        {
+          "name": "John Anderson",
+          "position": "Chief Executive Officer",
+          "bio": "20+ years in logistics and supply chain management"
+        },
+        {
+          "name": "Sarah Chen",
+          "position": "Chief Operations Officer",
+          "bio": "Expert in international freight operations and compliance"
+        },
+        {
+          "name": "Michael Rodriguez",
+          "position": "VP of Technology",
+          "bio": "Pioneering logistics technology and digital transformation"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to ship? Contact us for a free quote or to learn more about our services.",
+    "office_hours": "Monday - Friday: 8:00 AM - 6:00 PM",
+    "locations": [
+      {
+        "city": "Main Office - Port City",
+        "address": "123 Harbor Drive, Port City, PC 12345",
+        "phone": "+1 (555) 123-4567",
+        "email": "portcity@4windlogistics.com"
+      },
+      {
+        "city": "West Coast Hub - Los Angeles",
+        "address": "456 Ocean Blvd, Los Angeles, CA 90001",
+        "phone": "+1 (555) 234-5678",
+        "email": "la@4windlogistics.com"
+      },
+      {
+        "city": "East Coast Hub - New York",
+        "address": "789 Maritime Ave, New York, NY 10001",
+        "phone": "+1 (555) 345-6789",
+        "email": "ny@4windlogistics.com"
+      }
+    ]
+  }
+}
