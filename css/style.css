@@ -106,12 +106,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-tagline {
-    font-size: 0.75rem;
-    color: var(--primary-color);
+    font-size: 0.5rem;
+    color: #000000;
     font-weight: 500;
     margin: 0;
     line-height: 1.2;
-    white-space: nowrap;
+    max-width: 70px;
+    white-space: normal;
+    text-align: left;
 }
 
 .nav-menu {
