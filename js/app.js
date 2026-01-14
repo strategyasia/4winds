@@ -18,6 +18,7 @@ async function loadContent() {
         populateCompanyInfo();
         populateHome();
         populateAbout();
+        populateServices();
         populateContact();
         populateFooter();
 
@@ -123,6 +124,31 @@ function populateAbout() {
             <h4>${member.name}</h4>
             <p class="position">${member.position}</p>
             <p>${member.bio}</p>
+        </div>
+    `).join('');
+}
+
+// Populate services section
+function populateServices() {
+    const { services } = siteContent;
+
+    document.getElementById('services-title').textContent = services.title;
+    document.getElementById('services-subtitle').textContent = services.subtitle;
+    document.getElementById('services-description').textContent = services.description;
+
+    const servicesGrid = document.getElementById('services-detailed-grid');
+    servicesGrid.innerHTML = services.servicesList.map(service => `
+        <div class="service-detailed-card">
+            <div class="service-icon-large">${service.icon}</div>
+            <h3>${service.title}</h3>
+            <p class="service-desc">${service.description}</p>
+            <div class="service-features">
+                <h4>Key Features:</h4>
+                <ul>
+                    ${service.features.map(feature => `<li>${feature}</li>`).join('')}
+                </ul>
+            </div>
+            <a href="#contact" class="btn btn-primary" onclick="showSection('contact')">Request Quote</a>
         </div>
     `).join('');
 }
