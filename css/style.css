@@ -90,18 +90,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-color);
 }
 
 .logo-image {
-    height: 50px;
+    height: 70px;
     width: auto;
     object-fit: contain;
     border-radius: 5px;
+}
+
+.logo-tagline {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .nav-menu {
