@@ -106,28 +106,33 @@
       "services": [
         {
           "icon": "🌐",
-          "title": "International Moves",
-          "description": "Worldwide relocation services with comprehensive door-to-door solutions"
+          "title": "International Moving",
+          "description": "Worldwide relocation services with comprehensive door-to-door solutions and customs clearance"
         },
         {
           "icon": "🏘",
-          "title": "Domestic Moves",
-          "description": "Local and nationwide moving services tailored to your needs"
+          "title": "Domestic Moving",
+          "description": "Local and nationwide moving services with professional packing and delivery"
         },
         {
-          "icon": "🏛",
-          "title": "Office Moves",
-          "description": "Professional business relocation with minimal downtime"
+          "icon": "📦",
+          "title": "Household Goods Moving",
+          "description": "Complete household relocation services for both international and domestic moves"
         },
         {
-          "icon": "🗄",
-          "title": "Secure Storage",
-          "description": "Climate-controlled storage facilities with 24/7 security"
+          "icon": "🐾",
+          "title": "Pet Relocation",
+          "description": "Safe and stress-free pet travel with health certificates and airline coordination"
         },
         {
-          "icon": "🚚",
-          "title": "Vehicle Transfer",
-          "description": "Safe and reliable vehicle shipping services worldwide"
+          "icon": "🚗",
+          "title": "Cars/Automobile",
+          "description": "Professional vehicle shipping with open and enclosed carrier options worldwide"
+        },
+        {
+          "icon": "🏗️",
+          "title": "Project Cargo",
+          "description": "Heavy lift and oversized shipments with custom engineering solutions"
         }
       ]
     },

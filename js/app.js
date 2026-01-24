@@ -104,11 +104,11 @@ function populateHome() {
     const removalsGrid = document.getElementById('removals-grid');
     removalsGrid.innerHTML = home.removals.services.map((service, index) => {
         // Map each card to its corresponding icon image
-        const iconImages = ['8.png', '6.png', '4.png', '5.png', 'car.png'];
+        const iconImages = ['8.png', '6.png', '4.png', '5.png', 'car.png', '4.png'];
         const iconContent = `<img src="images/${iconImages[index]}" alt="${service.title}" class="icon-image">`;
 
         // Map each card to its corresponding service page
-        const serviceLinks = ['international', 'domestic', 'household-goods', 'pets-relocation', 'cars-automobile'];
+        const serviceLinks = ['international', 'domestic', 'household-goods', 'pets-relocation', 'cars-automobile', 'project-cargo'];
         const serviceLink = serviceLinks[index] || 'contact';
 
         return `
