@@ -104,7 +104,7 @@ function populateHome() {
     const removalsGrid = document.getElementById('removals-grid');
     removalsGrid.innerHTML = home.removals.services.map((service, index) => {
         // Map each card to its corresponding icon image
-        const iconImages = ['8.png', '6.png', '4.png', '5.png', 'car.png', '4.png'];
+        const iconImages = ['8.png', '6.png', '4.png', 'peticon.png', 'car.png', '4.png'];
         const iconContent = `<img src="images/${iconImages[index]}" alt="${service.title}" class="icon-image">`;
 
         // Map each card to its corresponding service page
