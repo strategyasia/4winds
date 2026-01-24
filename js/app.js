@@ -107,12 +107,16 @@ function populateHome() {
         const iconImages = ['8.png', '6.png', '4.png', '5.png', 'car.png'];
         const iconContent = `<img src="images/${iconImages[index]}" alt="${service.title}" class="icon-image">`;
 
+        // Map each card to its corresponding service page
+        const serviceLinks = ['international', 'domestic', 'household-goods', 'pets-relocation', 'cars-automobile'];
+        const serviceLink = serviceLinks[index] || 'contact';
+
         return `
-            <div class="removal-card">
+            <div class="removal-card" onclick="showSection('${serviceLink}')">
                 <div class="removal-icon image-icon">${iconContent}</div>
                 <h3>${service.title}</h3>
                 <p>${service.description}</p>
-                <a href="#contact" class="btn-quote" onclick="showSection('contact')">Get a quote</a>
+                <a href="#${serviceLink}" class="btn-quote" onclick="event.stopPropagation(); showSection('${serviceLink}')">Learn More</a>
             </div>
         `;
     }).join('');

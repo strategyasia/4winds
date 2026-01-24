@@ -1281,6 +1281,31 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.95rem;
 }
 
+/* Showcase Items Without Captions */
+.showcase-grid-no-captions {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.showcase-item-no-caption {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.showcase-item-no-caption:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-item-no-caption img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
 /* Pet Services Info */
 .pet-services-info {
     margin-top: 3rem;
