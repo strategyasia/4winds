@@ -49,7 +49,38 @@ function populateNavigation() {
     navMenu.innerHTML = publishedItems.map(item => {
         // Extract section name from URL (e.g., #home -> home)
         const sectionName = item.url.replace('#', '');
-        return `<li><a href="${item.url}" class="nav-link" onclick="showSection('${sectionName}')">${item.label}</a></li>`;
+
+        // Check if item has dropdown
+        if (item.hasDropdown && item.submenu) {
+            return `
+                <li class="dropdown">
+                    <a href="${item.url}" class="nav-link" onclick="showSection('${sectionName}')">
+                        ${item.label} <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        ${item.submenu.map(subitem => {
+                            // Check if submenu item has nested submenu
+                            if (subitem.hasSubmenu && subitem.submenu) {
+                                return `
+                                    <li class="dropdown-submenu">
+                                        <a href="${subitem.url}">${subitem.label} <span class="submenu-arrow">►</span></a>
+                                        <ul class="dropdown-submenu-menu">
+                                            ${subitem.submenu.map(nestedItem =>
+                                                `<li><a href="${nestedItem.url}">${nestedItem.label}</a></li>`
+                                            ).join('')}
+                                        </ul>
+                                    </li>
+                                `;
+                            } else {
+                                return `<li><a href="${subitem.url}">${subitem.label}</a></li>`;
+                            }
+                        }).join('')}
+                    </ul>
+                </li>
+            `;
+        } else {
+            return `<li><a href="${item.url}" class="nav-link" onclick="showSection('${sectionName}')">${item.label}</a></li>`;
+        }
     }).join('');
 }
 
@@ -224,6 +255,48 @@ function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
     navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
 }
+
+// Mobile dropdown toggle - called from navigation items
+function toggleDropdown(event) {
+    // Only for mobile screens
+    if (window.innerWidth <= 768) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const dropdown = event.currentTarget.closest('.dropdown, .dropdown-submenu');
+        if (dropdown) {
+            dropdown.classList.toggle('active');
+        }
+    }
+}
+
+// Add click handlers to dropdowns for mobile
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait for navigation to be populated
+    setTimeout(() => {
+        const dropdowns = document.querySelectorAll('.dropdown > .nav-link');
+        dropdowns.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    link.parentElement.classList.toggle('active');
+                }
+            });
+        });
+
+        const submenus = document.querySelectorAll('.dropdown-submenu > a');
+        submenus.forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    link.parentElement.classList.toggle('active');
+                }
+            });
+        });
+    }, 500);
+});
 
 // Handle contact form submission
 function handleFormSubmit(event) {

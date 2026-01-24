@@ -18,6 +18,21 @@
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link active" onclick="showSection('home')">Home</a></li>
                     <li><a href="#about" class="nav-link" onclick="showSection('about')">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#services" class="nav-link" onclick="showSection('services')">Our Services <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#household-goods">Household Goods Moving <span class="submenu-arrow">►</span></a>
+                                <ul class="dropdown-submenu-menu">
+                                    <li><a href="#international">International</a></li>
+                                    <li><a href="#domestic">Domestic</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#cars-automobile">Cars/Automobile</a></li>
+                            <li><a href="#pets-relocation">Pets Relocation</a></li>
+                            <li><a href="#project-cargo">Project Cargo</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact Us</a></li>
                 </ul>
                 <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
@@ -251,6 +266,7 @@
                     <ul>
                         <li><a href="#home" onclick="showSection('home')">Home</a></li>
                         <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                        <li><a href="#services" onclick="showSection('services')">Our Services</a></li>
                         <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
                     </ul>
                 </div>
