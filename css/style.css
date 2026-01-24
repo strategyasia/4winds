@@ -1131,6 +1131,69 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Service Detail Pages */
+.service-detail-content {
+    padding: 3rem 0;
+}
+
+.service-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-options {
+    margin-top: 4rem;
+}
+
+.service-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.option-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.option-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.option-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.option-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.option-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
