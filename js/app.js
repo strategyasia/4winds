@@ -5,6 +5,7 @@ let siteContent = null;
 document.addEventListener('DOMContentLoaded', async () => {
     await loadContent();
     initializeNavigation();
+    initializeServicePages();
 });
 
 // Load content from JSON file
@@ -61,18 +62,21 @@ function populateNavigation() {
                         ${item.submenu.map(subitem => {
                             // Check if submenu item has nested submenu
                             if (subitem.hasSubmenu && subitem.submenu) {
+                                const subSectionName = subitem.url.replace('#', '');
                                 return `
                                     <li class="dropdown-submenu">
-                                        <a href="${subitem.url}">${subitem.label} <span class="submenu-arrow">►</span></a>
+                                        <a href="${subitem.url}" onclick="showSection('${subSectionName}')">${subitem.label} <span class="submenu-arrow">►</span></a>
                                         <ul class="dropdown-submenu-menu">
-                                            ${subitem.submenu.map(nestedItem =>
-                                                `<li><a href="${nestedItem.url}">${nestedItem.label}</a></li>`
-                                            ).join('')}
+                                            ${subitem.submenu.map(nestedItem => {
+                                                const nestedSectionName = nestedItem.url.replace('#', '');
+                                                return `<li><a href="${nestedItem.url}" onclick="showSection('${nestedSectionName}')">${nestedItem.label}</a></li>`;
+                                            }).join('')}
                                         </ul>
                                     </li>
                                 `;
                             } else {
-                                return `<li><a href="${subitem.url}">${subitem.label}</a></li>`;
+                                const subSectionName = subitem.url.replace('#', '');
+                                return `<li><a href="${subitem.url}" onclick="showSection('${subSectionName}')">${subitem.label}</a></li>`;
                             }
                         }).join('')}
                     </ul>
@@ -207,6 +211,47 @@ function populateFooter() {
     document.getElementById('footer-phone').textContent = company.phone;
     document.getElementById('footer-email').textContent = company.email;
     document.getElementById('footer-company').textContent = company.name;
+}
+
+// Initialize service pages
+function initializeServicePages() {
+    if (!siteContent) return;
+
+    // Household Goods Moving
+    if (siteContent.householdGoods) {
+        const elem = document.getElementById('household-goods-content');
+        if (elem) elem.textContent = siteContent.householdGoods.content;
+    }
+
+    // International Moving
+    if (siteContent.international) {
+        const elem = document.getElementById('international-content');
+        if (elem) elem.textContent = siteContent.international.content;
+    }
+
+    // Domestic Moving
+    if (siteContent.domestic) {
+        const elem = document.getElementById('domestic-content');
+        if (elem) elem.textContent = siteContent.domestic.content;
+    }
+
+    // Cars/Automobile
+    if (siteContent.carsAutomobile) {
+        const elem = document.getElementById('cars-automobile-content');
+        if (elem) elem.textContent = siteContent.carsAutomobile.content;
+    }
+
+    // Pets Relocation
+    if (siteContent.petsRelocation) {
+        const elem = document.getElementById('pets-relocation-content');
+        if (elem) elem.textContent = siteContent.petsRelocation.content;
+    }
+
+    // Project Cargo
+    if (siteContent.projectCargo) {
+        const elem = document.getElementById('project-cargo-content');
+        if (elem) elem.textContent = siteContent.projectCargo.content;
+    }
 }
 
 // Navigation functions
