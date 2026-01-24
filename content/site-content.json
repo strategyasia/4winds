@@ -20,7 +20,43 @@
         "label": "Our Services",
         "url": "#services",
         "order": 3,
-        "published": true
+        "published": true,
+        "hasDropdown": true,
+        "submenu": [
+          {
+            "id": "household-goods",
+            "label": "Household Goods Moving",
+            "url": "#household-goods",
+            "hasSubmenu": true,
+            "submenu": [
+              {
+                "id": "international",
+                "label": "International",
+                "url": "#international"
+              },
+              {
+                "id": "domestic",
+                "label": "Domestic",
+                "url": "#domestic"
+              }
+            ]
+          },
+          {
+            "id": "cars-automobile",
+            "label": "Cars/Automobile",
+            "url": "#cars-automobile"
+          },
+          {
+            "id": "pets-relocation",
+            "label": "Pets Relocation",
+            "url": "#pets-relocation"
+          },
+          {
+            "id": "project-cargo",
+            "label": "Project Cargo",
+            "url": "#project-cargo"
+          }
+        ]
       },
       {
         "id": "contact",
