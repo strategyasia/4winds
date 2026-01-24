@@ -1129,6 +1129,37 @@ h1, h2, h3, h4, h5, h6 {
         height: 500px;
         border-radius: 10px;
     }
+
+    /* Service Showcase Mobile */
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .showcase-grid-pets {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-item img {
+        height: 200px;
+    }
+
+    .service-showcase {
+        padding: 2rem 0;
+        margin: 2rem 0;
+    }
+
+    .pet-services-info {
+        padding: 1.5rem;
+    }
+
+    .pet-services-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .pet-services-info li {
+        font-size: 0.95rem;
+    }
 }
 
 /* Service Detail Pages */
@@ -1192,6 +1223,96 @@ h1, h2, h3, h4, h5, h6 {
 .cta-section {
     text-align: center;
     margin: 4rem 0;
+}
+
+/* Service Showcase/Gallery */
+.service-showcase {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: var(--bg-color);
+    border-radius: 16px;
+}
+
+.service-showcase .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.showcase-grid-pets {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.showcase-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.showcase-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.showcase-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.showcase-item p {
+    padding: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Pet Services Info */
+.pet-services-info {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pet-services-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.pet-services-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pet-services-info li {
+    padding: 0.75rem 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pet-services-info li:last-child {
+    border-bottom: none;
 }
 
 /* Animations */
