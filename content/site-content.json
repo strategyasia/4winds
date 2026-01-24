@@ -303,5 +303,35 @@
         "email": "ny@4windlogistics.com"
       }
     ]
+  },
+  "householdGoods": {
+    "title": "Household Goods Moving",
+    "subtitle": "International & Domestic",
+    "content": "We make relocating your home simple—whether you're moving across town or to another country. Our team professionally packs, ships, and delivers your belongings with care, handling everything from furniture to fragile heirlooms. For international moves, we manage customs paperwork and import regulations so you don't have to."
+  },
+  "international": {
+    "title": "International Moving",
+    "subtitle": "Worldwide Relocation Services",
+    "content": "We make relocating your home to another country simple and stress-free. Our team professionally packs, ships, and delivers your belongings with care, handling everything from furniture to fragile heirlooms. We manage all customs paperwork and import regulations so you don't have to worry about the complex international requirements. With our network of 1000 international audited and certified agents around the globe, we ensure your belongings arrive safely at your new home, no matter where in the world you're moving."
+  },
+  "domestic": {
+    "title": "Domestic Moving",
+    "subtitle": "Local & Nationwide Moving Services",
+    "content": "Moving across town or across the country? We make relocating within your home country simple and efficient. Our team professionally packs, ships, and delivers your belongings with care, handling everything from furniture to fragile heirlooms. Whether it's a local move or a long-distance relocation, we provide the same level of professional service and attention to detail that has made us a trusted name in the moving industry."
+  },
+  "carsAutomobile": {
+    "title": "Vehicle & Automobile Shipping",
+    "subtitle": "Cars, Motorcycles & Specialty Vehicles",
+    "content": "Ship your vehicle safely anywhere in the world. We offer open and enclosed carrier options for domestic transport, plus full international shipping with customs clearance and compliance documentation. From everyday cars to luxury collectibles, every vehicle is inspected, secured, and insured throughout its journey. Our specialized team understands the unique requirements of vehicle shipping and ensures your car, motorcycle, or specialty vehicle arrives in perfect condition."
+  },
+  "petsRelocation": {
+    "title": "Pet Relocation",
+    "subtitle": "Safe Travel for Your Furry Family",
+    "content": "Your pets deserve the same care you'd give them at home. We handle health certificates, vaccinations, import permits, and airline bookings to ensure your companion travels safely and comfortably. Our specialists navigate country-specific requirements and quarantine rules so your pet arrives stress-free. We understand that your pets are family members, and we treat them with the love and care they deserve throughout their journey to their new home."
+  },
+  "projectCargo": {
+    "title": "Project Cargo",
+    "subtitle": "Heavy Lift & Oversized Shipments",
+    "content": "When standard shipping isn't enough, our project cargo team delivers. We transport oversized industrial equipment—turbines, generators, mining machinery, and more—using custom engineering solutions, specialized vessels, and multimodal logistics. From route planning to final placement, we manage complex shipments that others can't handle. Our experienced team has successfully delivered some of the world's most challenging cargo projects, providing end-to-end solutions for your heavy lift requirements."
   }
 }
