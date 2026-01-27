@@ -552,6 +552,149 @@
         </div>
     </section>
 
+    <!-- Project Cargo Completed Section -->
+    <section id="project-cargo-completed-section" class="section">
+        <div class="container">
+            <div class="completed-projects-header">
+                <h2 class="section-title">PROJECT CARGO COMPLETED</h2>
+                <p class="section-subtitle">Our Successfully Executed Major Projects</p>
+            </div>
+
+            <!-- Project 1: Philips Lights Malaysia -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">01</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Philips Lights Malaysia</h3>
+                        <p class="project-description">Moving of the entire plant equipment from Penang to Shenzhen, China.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(1, 0)">
+                        <img src="images/1.png" alt="Philips Malaysia Project 1">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(1, 1)">
+                        <img src="images/2.png" alt="Philips Malaysia Project 2">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(1, 2)">
+                        <img src="images/3.png" alt="Philips Malaysia Project 3">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Read-Rite Malaysia -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">02</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Read-Rite Malaysia</h3>
+                        <p class="project-description">Moving of the entire plant equipment from Penang to Thailand, Philippines & California.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(2, 0)">
+                        <img src="images/4.png" alt="Read-Rite Malaysia Project 1">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(2, 1)">
+                        <img src="images/5.png" alt="Read-Rite Malaysia Project 2">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(2, 2)">
+                        <img src="images/6.png" alt="Read-Rite Malaysia Project 3">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Read-Rite Philippines -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">03</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Read-Rite Philippines</h3>
+                        <p class="project-description">Moving of the entire plant equipment from Philippines to Thailand & California.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(3, 0)">
+                        <img src="images/7.png" alt="Read-Rite Philippines Project 1">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(3, 1)">
+                        <img src="images/8.png" alt="Read-Rite Philippines Project 2">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(3, 2)">
+                        <img src="images/9.png" alt="Read-Rite Philippines Project 3">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Mandarin Hotel KLCC -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">04</div>
+                    <div class="project-info">
+                        <h3 class="project-title">MANDARIN HOTEL (KLCC)</h3>
+                        <p class="project-description">Logistics provider for the routing, storage & installation of the entire hotel equipment, fittings and fixtures.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(4, 0)">
+                        <img src="images/1.png" alt="Mandarin Hotel Project 1">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(4, 1)">
+                        <img src="images/2.png" alt="Mandarin Hotel Project 2">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(4, 2)">
+                        <img src="images/3.png" alt="Mandarin Hotel Project 3">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal" onclick="closeGalleryModal()">
+        <span class="modal-close">&times;</span>
+        <button class="modal-nav modal-prev" onclick="event.stopPropagation(); changeModalImage(-1)">&#10094;</button>
+        <img class="modal-content" id="modal-image" onclick="event.stopPropagation()">
+        <button class="modal-nav modal-next" onclick="event.stopPropagation(); changeModalImage(1)">&#10095;</button>
+        <div class="modal-caption" id="modal-caption"></div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">

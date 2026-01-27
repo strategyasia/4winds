@@ -443,9 +443,91 @@ function goToSlide(index) {
     }
 }
 
+// Gallery Modal Functionality for Project Cargo Completed Section
+let currentProjectImages = [];
+let currentImageIndex = 0;
+
+const projectGalleries = {
+    1: ['images/1.png', 'images/2.png', 'images/3.png'],
+    2: ['images/4.png', 'images/5.png', 'images/6.png'],
+    3: ['images/7.png', 'images/8.png', 'images/9.png'],
+    4: ['images/1.png', 'images/2.png', 'images/3.png']
+};
+
+const projectTitles = {
+    1: 'Philips Lights Malaysia',
+    2: 'Read-Rite Malaysia',
+    3: 'Read-Rite Philippines',
+    4: 'MANDARIN HOTEL (KLCC)'
+};
+
+function openGalleryModal(projectId, imageIndex) {
+    currentProjectImages = projectGalleries[projectId];
+    currentImageIndex = imageIndex;
+
+    const modal = document.getElementById('gallery-modal');
+    const modalImg = document.getElementById('modal-image');
+    const caption = document.getElementById('modal-caption');
+
+    if (modal && modalImg && caption) {
+        modal.style.display = 'flex';
+        modalImg.src = currentProjectImages[currentImageIndex];
+        caption.textContent = `${projectTitles[projectId]} - Image ${currentImageIndex + 1} of ${currentProjectImages.length}`;
+
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeGalleryModal() {
+    const modal = document.getElementById('gallery-modal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function changeModalImage(direction) {
+    currentImageIndex += direction;
+
+    if (currentImageIndex < 0) {
+        currentImageIndex = currentProjectImages.length - 1;
+    } else if (currentImageIndex >= currentProjectImages.length) {
+        currentImageIndex = 0;
+    }
+
+    const modalImg = document.getElementById('modal-image');
+    const caption = document.getElementById('modal-caption');
+
+    if (modalImg && caption) {
+        modalImg.src = currentProjectImages[currentImageIndex];
+
+        const currentProject = Object.keys(projectGalleries).find(key =>
+            projectGalleries[key] === currentProjectImages
+        );
+        caption.textContent = `${projectTitles[currentProject]} - Image ${currentImageIndex + 1} of ${currentProjectImages.length}`;
+    }
+}
+
+// Keyboard navigation for gallery modal
+document.addEventListener('keydown', function(event) {
+    const modal = document.getElementById('gallery-modal');
+    if (modal && modal.style.display === 'flex') {
+        if (event.key === 'Escape') {
+            closeGalleryModal();
+        } else if (event.key === 'ArrowLeft') {
+            changeModalImage(-1);
+        } else if (event.key === 'ArrowRight') {
+            changeModalImage(1);
+        }
+    }
+});
+
 // Make functions available globally
 window.showSection = showSection;
 window.toggleMobileMenu = toggleMobileMenu;
 window.handleFormSubmit = handleFormSubmit;
 window.changeSlide = changeSlide;
 window.goToSlide = goToSlide;
+window.openGalleryModal = openGalleryModal;
+window.closeGalleryModal = closeGalleryModal;
+window.changeModalImage = changeModalImage;
