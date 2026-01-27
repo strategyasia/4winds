@@ -464,9 +464,9 @@ const projectGalleries = {
         'https://via.placeholder.com/800x600/1e40af/ffffff?text=Read-Rite+Philippines+Image+3'
     ],
     4: [
-        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Mandarin+Hotel+Image+1',
-        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Mandarin+Hotel+Image+2',
-        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Mandarin+Hotel+Image+3'
+        'content/klcc/16029947-exterior-mandarin-oriental-kuala-lumpur.webp',
+        'content/klcc/20191206_466044.webp',
+        'content/klcc/maxresdefault.jpg'
     ]
 };
 
