@@ -448,10 +448,26 @@ let currentProjectImages = [];
 let currentImageIndex = 0;
 
 const projectGalleries = {
-    1: ['images/1.png', 'images/2.png', 'images/3.png'],
-    2: ['images/4.png', 'images/5.png', 'images/6.png'],
-    3: ['images/7.png', 'images/8.png', 'images/9.png'],
-    4: ['images/1.png', 'images/2.png', 'images/3.png']
+    1: [
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Philips+Malaysia+Image+1',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Philips+Malaysia+Image+2',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Philips+Malaysia+Image+3'
+    ],
+    2: [
+        'content/read-rite/PHOTO-2026-01-27-13-46-29.jpg',
+        'content/read-rite/PHOTO-2026-01-27-13-46-30.jpg',
+        'content/read-rite/PHOTO-2026-01-27-13-46-30 2.jpg'
+    ],
+    3: [
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Read-Rite+Philippines+Image+1',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Read-Rite+Philippines+Image+2',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Read-Rite+Philippines+Image+3'
+    ],
+    4: [
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Mandarin+Hotel+Image+1',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Mandarin+Hotel+Image+2',
+        'https://via.placeholder.com/800x600/1e40af/ffffff?text=Mandarin+Hotel+Image+3'
+    ]
 };
 
 const projectTitles = {
