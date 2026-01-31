@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>admin-guide</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <link href="data:text/css,body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;padding:20px;line-height:1.6;}h1{color:%231e40af;border-bottom:3px solid %231e40af;padding-bottom:10px;}h2{color:%232563eb;margin-top:30px;border-bottom:2px solid %23ddd;padding-bottom:5px;}h3{color:%23333;}code{background:%23f4f4f4;padding:2px 6px;border-radius:3px;}pre{background:%23f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;}a{color:%231e40af;}table{border-collapse:collapse;width:100%;}th,td{border:1px solid %23ddd;padding:8px;text-align:left;}th{background:%231e40af;color:white;}" rel="stylesheet" />
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#four-winds-worldwide" id="toc-four-winds-worldwide">Four
+Winds Worldwide</a>
+<ul>
+<li><a href="#admin-dashboard-user-guide" id="toc-admin-dashboard-user-guide">Admin Dashboard User Guide</a></li>
+<li><a href="#table-of-contents" id="toc-table-of-contents">Table of
+Contents</a></li>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#accessing-the-admin-dashboard" id="toc-accessing-the-admin-dashboard">Accessing the Admin
+Dashboard</a></li>
+<li><a href="#dashboard-overview" id="toc-dashboard-overview">Dashboard
+Overview</a></li>
+<li><a href="#managing-content" id="toc-managing-content">Managing
+Content</a></li>
+<li><a href="#saving-changes" id="toc-saving-changes">Saving
+Changes</a></li>
+<li><a href="#best-practices" id="toc-best-practices">Best
+Practices</a></li>
+<li><a href="#troubleshooting" id="toc-troubleshooting">Troubleshooting</a></li>
+<li><a href="#quick-reference" id="toc-quick-reference">Quick
+Reference</a></li>
+<li><a href="#version-history" id="toc-version-history">Version
+History</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="four-winds-worldwide">Four Winds Worldwide</h1>
+<h2 id="admin-dashboard-user-guide">Admin Dashboard User Guide</h2>
+<p><strong>Version 2.0</strong> <strong>Last Updated: January 30,
+2026</strong></p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol type="1">
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#accessing-the-admin-dashboard">Accessing the Admin
+Dashboard</a></li>
+<li><a href="#dashboard-overview">Dashboard Overview</a></li>
+<li><a href="#managing-content">Managing Content</a>
+<ul>
+<li><a href="#navigation-menu">Navigation Menu</a></li>
+<li><a href="#slider-images">Slider Images</a></li>
+<li><a href="#image-library">Image Library</a></li>
+<li><a href="#company-information">Company Information</a></li>
+<li><a href="#home-page-content">Home Page Content</a></li>
+<li><a href="#about-us-page">About Us Page</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact-information">Contact Information</a></li>
+</ul></li>
+<li><a href="#saving-changes">Saving Changes</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ol>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>The Four Winds Worldwide Admin Dashboard is a web-based content
+management system that allows you to easily update and manage your
+website content without technical knowledge. This guide will walk you
+through all features and help you maintain your website efficiently.</p>
+<h3 id="what-you-can-do">What You Can Do</h3>
+<ul>
+<li>Update company information (phone, email, address)</li>
+<li>Edit page content and descriptions</li>
+<li>Manage navigation menu items</li>
+<li>Update slider images on the homepage</li>
+<li>Manage image library</li>
+<li>Edit team member information</li>
+<li>Update service descriptions</li>
+<li>Modify contact information</li>
+</ul>
+<hr />
+<h2 id="accessing-the-admin-dashboard">Accessing the Admin
+Dashboard</h2>
+<h3 id="step-1-open-the-admin-login-page">Step 1: Open the Admin Login
+Page</h3>
+<ol type="1">
+<li>Navigate to: <code>/admin/index.html</code> in your browser</li>
+<li>You’ll see the Four Winds Worldwide Admin Login page</li>
+</ol>
+<h3 id="step-2-log-in">Step 2: Log In</h3>
+<ol type="1">
+<li><strong>Username</strong>: <code>admin</code></li>
+<li><strong>Password</strong>: <code>fourwinds2024</code></li>
+<li>Click the <strong>“Login”</strong> button</li>
+</ol>
+<p><strong>Important Security Notes:</strong> - Your session will remain
+active for 24 hours - Always log out when finished - Change the default
+password in production - Don’t share login credentials</p>
+<h3 id="step-3-dashboard-access">Step 3: Dashboard Access</h3>
+<p>After successful login, you’ll be redirected to the main dashboard
+where you can manage all website content.</p>
+<hr />
+<h2 id="dashboard-overview">Dashboard Overview</h2>
+<h3 id="header-section">Header Section</h3>
+<p>At the top of the dashboard, you’ll find:</p>
+<ul>
+<li><strong>Admin Dashboard Title</strong>: Confirms you’re in the admin
+area</li>
+<li><strong>Save All Changes</strong> button (green): Saves all your
+edits</li>
+<li><strong>View Website</strong> button: Opens the live website in a
+new tab</li>
+<li><strong>Logout</strong> button: Ends your session</li>
+</ul>
+<h3 id="content-sections">Content Sections</h3>
+<p>The dashboard is organized into collapsible sections, each managing
+different parts of your website:</p>
+<ol type="1">
+<li>Navigation Menu</li>
+<li>Slider Images</li>
+<li>Image Library</li>
+<li>Company Information</li>
+<li>Home - Hero Section</li>
+<li>Home - Removals Solutions</li>
+<li>Home - Statistics</li>
+<li>About Us Page</li>
+<li>About - Our Values</li>
+<li>About - Our Team</li>
+<li>Contact Us Page</li>
+</ol>
+<hr />
+<h2 id="managing-content">Managing Content</h2>
+<h3 id="navigation-menu">Navigation Menu</h3>
+<p><strong>Purpose</strong>: Manage the main navigation menu at the top
+of your website.</p>
+<h4 id="viewing-menu-items">Viewing Menu Items</h4>
+<ul>
+<li>All menu items are displayed in order</li>
+<li>Published items appear normal; unpublished items appear faded</li>
+<li>Each item shows: Label, URL, Order, and Published status</li>
+</ul>
+<h4 id="editing-a-menu-item">Editing a Menu Item</h4>
+<ol type="1">
+<li>Locate the menu item you want to edit</li>
+<li>Modify any of these fields:
+<ul>
+<li><strong>Menu Label</strong>: The text displayed in the menu</li>
+<li><strong>URL</strong>: Where the link points (e.g.,
+<code>#home</code>, <code>#about</code>)</li>
+<li><strong>Order</strong>: Number determining position (1 = first, 2 =
+second, etc.)</li>
+<li><strong>Published</strong>: Check to show, uncheck to hide</li>
+</ul></li>
+</ol>
+<h4 id="adding-a-new-menu-item">Adding a New Menu Item</h4>
+<ol type="1">
+<li>Click the <strong>“+ Add Menu Item”</strong> button</li>
+<li>A new menu item appears with default values</li>
+<li>Edit all fields as needed</li>
+<li>Set Published to checked when ready to display</li>
+<li>Click <strong>“Save All Changes”</strong></li>
+</ol>
+<h4 id="deleting-a-menu-item">Deleting a Menu Item</h4>
+<ol type="1">
+<li>Click the <strong>“Delete”</strong> button (trash icon) next to the
+item</li>
+<li>Confirm the deletion</li>
+<li>Click <strong>“Save All Changes”</strong> to apply</li>
+</ol>
+<hr />
+<h3 id="slider-images">Slider Images</h3>
+<p><strong>Purpose</strong>: Manage the rotating images on the homepage
+hero section.</p>
+<h4 id="viewing-slider-images">Viewing Slider Images</h4>
+<ul>
+<li>Images are displayed with thumbnail previews</li>
+<li>Shows: Image preview, URL, Alt text, Order, and Published
+status</li>
+<li>Unpublished images appear faded</li>
+</ul>
+<h4 id="editing-a-slider-image">Editing a Slider Image</h4>
+<ol type="1">
+<li>Locate the image you want to edit</li>
+<li>Modify any of these fields:
+<ul>
+<li><strong>Image URL</strong>: Path to the image file (e.g.,
+<code>images/slider1.jpg</code>)</li>
+<li><strong>Alt Text</strong>: Description for accessibility and
+SEO</li>
+<li><strong>Order</strong>: Display sequence (1 = first slide, 2 =
+second, etc.)</li>
+<li><strong>Published</strong>: Check to show, uncheck to hide</li>
+</ul></li>
+</ol>
+<p><strong>Image URL Guidelines:</strong> - Use relative paths:
+<code>images/your-image.jpg</code> - Recommended size: 1920x1080 pixels
+(16:9 ratio) - Supported formats: JPG, PNG, WebP - Keep file size under
+500KB for fast loading</p>
+<h4 id="adding-a-new-slider-image">Adding a New Slider Image</h4>
+<ol type="1">
+<li>Click the <strong>“+ Add Slider Image”</strong> button</li>
+<li>Update the Image URL to your image path</li>
+<li>Add descriptive Alt Text</li>
+<li>Set the Order number</li>
+<li>Check Published when ready</li>
+<li>Click <strong>“Save All Changes”</strong></li>
+</ol>
+<h4 id="deleting-a-slider-image">Deleting a Slider Image</h4>
+<ol type="1">
+<li>Click the <strong>“Delete”</strong> button (trash icon)</li>
+<li>Confirm the deletion</li>
+<li>Click <strong>“Save All Changes”</strong></li>
+</ol>
+<hr />
+<h3 id="image-library">Image Library</h3>
+<p><strong>Purpose</strong>: Store and manage reusable images for your
+website.</p>
+<h4 id="uploading-images">Uploading Images</h4>
+<ol type="1">
+<li>Click the <strong>“Upload Image”</strong> button</li>
+<li>Select an image file from your computer</li>
+<li>The image will be added to the library</li>
+<li><strong>Important</strong>: Uploaded images are stored as base64
+data in the JSON file</li>
+</ol>
+<p><strong>Production Note</strong>: For best performance, manually save
+uploaded images to your <code>images/</code> or <code>content/</code>
+folder and update the URL reference.</p>
+<h4 id="using-library-images">Using Library Images</h4>
+<ol type="1">
+<li>Find the image you want to use</li>
+<li>Click the <strong>“Copy URL”</strong> button</li>
+<li>Paste the URL into any image field (slider, services, etc.)</li>
+</ol>
+<h4 id="deleting-library-images">Deleting Library Images</h4>
+<ol type="1">
+<li>Click the <strong>trash icon</strong> on the image</li>
+<li>Confirm the deletion</li>
+<li>The image is removed from the library</li>
+</ol>
+<hr />
+<h3 id="company-information">Company Information</h3>
+<p><strong>Purpose</strong>: Update your company’s contact details
+displayed across the website.</p>
+<h4 id="editable-fields">Editable Fields</h4>
+<ul>
+<li><strong>Company Name</strong>: Your business name (appears in
+header/footer)</li>
+<li><strong>Tagline</strong>: Your company slogan or tagline</li>
+<li><strong>Phone Number</strong>: Main contact number
+<ul>
+<li>Format: <code>(+60)12202-2719</code></li>
+</ul></li>
+<li><strong>Email Address</strong>: Primary contact email
+<ul>
+<li>Current: <code>edgar@fourwindsinternatinal.com</code></li>
+</ul></li>
+<li><strong>Address</strong>: Physical business address
+<ul>
+<li>Current:
+<code>16-1, Jalan Kasuarina 8, Bandar Botanic, 41200 Klang, Selangor, Malaysia</code></li>
+</ul></li>
+</ul>
+<h4 id="how-to-edit">How to Edit</h4>
+<ol type="1">
+<li>Click in any field and type your changes</li>
+<li>Ensure phone and email are correctly formatted</li>
+<li>Click <strong>“Save All Changes”</strong> when done</li>
+</ol>
+<hr />
+<h3 id="home-page-content">Home Page Content</h3>
+<h4 id="hero-section">Hero Section</h4>
+<p><strong>Purpose</strong>: The first section visitors see on your
+homepage.</p>
+<p><strong>Editable Fields:</strong> - <strong>Hero Title</strong>: Main
+headline (e.g., “Global Logistics Solutions”) - <strong>Hero
+Subtitle</strong>: Supporting text explaining your services -
+<strong>Call to Action Button Text</strong>: Text on the main CTA button
+(e.g., “Get a Quote”)</p>
+<h4 id="removals-solutions-section">Removals Solutions Section</h4>
+<p><strong>Purpose</strong>: Showcase your core services with icons and
+descriptions.</p>
+<p><strong>Editable Fields:</strong> - <strong>Section Title</strong>:
+Main heading for the services area - <strong>Section Subtitle</strong>:
+Brief description of your services</p>
+<p><strong>Service Cards (6 items):</strong> Each service has: -
+<strong>Icon</strong>: Emoji or icon character - <strong>Title</strong>:
+Service name - <strong>Description</strong>: Brief explanation of the
+service</p>
+<p><strong>Available Services:</strong> 1. International Moving 2.
+Domestic Moving 3. Household Goods Moving 4. Pet Relocation 5.
+Cars/Automobile 6. Project Cargo</p>
+<p><strong>Editing Services:</strong> 1. Scroll to the service you want
+to edit 2. Modify the icon, title, or description 3. Keep descriptions
+concise (1-2 sentences) 4. Click <strong>“Save All Changes”</strong></p>
+<h4 id="statistics-section">Statistics Section</h4>
+<p><strong>Purpose</strong>: Display impressive numbers about your
+company.</p>
+<p><strong>Current Stats:</strong> - 25+ Years Experience - 10K+
+Shipments Delivered - 50+ Countries Served - 98% Customer
+Satisfaction</p>
+<p><strong>Editing Stats:</strong> 1. Locate the stat you want to edit
+2. Update: - <strong>Number/Value</strong>: The statistic (e.g., “25+”,
+“10K+”) - <strong>Label</strong>: What the number represents 3. Use “+”
+symbols for emphasis (e.g., “50+”) 4. Click <strong>“Save All
+Changes”</strong></p>
+<hr />
+<h3 id="about-us-page">About Us Page</h3>
+<h4 id="main-content">Main Content</h4>
+<p><strong>Editable Fields:</strong> - <strong>Page Title</strong>: Main
+heading (e.g., “About Four Winds Worldwide”) - <strong>Mission
+Statement</strong>: Your company’s mission (2-3 sentences) - <strong>Our
+Story</strong>: Company history and background</p>
+<p><strong>Editing the Story:</strong> - The story field uses pipe
+symbols <code>|</code> to separate paragraphs - Example:
+<code>Paragraph 1 text here|Paragraph 2 text here|Paragraph 3 text here</code>
+- Each section between <code>|</code> becomes a separate paragraph on
+the website</p>
+<h4 id="our-values">Our Values</h4>
+<p><strong>Purpose</strong>: Highlight your company’s core values.</p>
+<p><strong>Current Values:</strong> 1. Reliability 2. Innovation 3.
+Customer Focus 4. Global Network</p>
+<p><strong>Editing Values:</strong> 1. Locate the value you want to edit
+2. Update: - <strong>Title</strong>: Value name -
+<strong>Description</strong>: Explanation of the value 3. Keep
+descriptions clear and concise 4. Click <strong>“Save All
+Changes”</strong></p>
+<h4 id="our-team">Our Team</h4>
+<p><strong>Purpose</strong>: Introduce your leadership team to
+visitors.</p>
+<p><strong>Current Team Members:</strong> 1. <strong>Edgar Stephen
+Pereira</strong> - Chief Executive Officer - 30+ years in International
+Moving, Project Cargo and Supply Chain Logistics 2. <strong>Jerad
+Tharmaraj</strong> - Chief Operations Officer - Expert in international
+freight operations and compliance 3. <strong>Michael Rodriguez</strong>
+- Finance Director - Pioneering logistics technology and digital
+transformation</p>
+<p><strong>Editing Team Members:</strong> 1. Locate the team member you
+want to edit 2. Update: - <strong>Name</strong>: Full name -
+<strong>Position</strong>: Job title -
+<strong>Biography/Description</strong>: Professional background and
+expertise 3. Keep bios professional but approachable 4. Highlight key
+achievements and years of experience 5. Click <strong>“Save All
+Changes”</strong></p>
+<hr />
+<h3 id="services">Services</h3>
+<p><strong>Purpose</strong>: Detailed information about your service
+offerings.</p>
+<p>The services section is managed through the Home - Removals Solutions
+section (see above). Additional service pages like International Moving,
+Domestic Moving, Pet Relocation, Cars/Automobile, and Project Cargo are
+controlled through the <code>site-content.json</code> file directly.</p>
+<hr />
+<h3 id="contact-information">Contact Information</h3>
+<p><strong>Purpose</strong>: Manage contact page content and office
+locations.</p>
+<h4 id="main-contact-section">Main Contact Section</h4>
+<p><strong>Editable Fields:</strong> - <strong>Page Title</strong>:
+Contact page heading - <strong>Page Subtitle</strong>: Introduction text
+- <strong>Office Hours</strong>: Business hours (e.g., “Monday - Friday:
+8:00 AM - 6:00 PM”)</p>
+<h4 id="office-locations">Office Locations</h4>
+<p><strong>Purpose</strong>: List multiple office locations with contact
+details.</p>
+<p><strong>Current Locations:</strong> 1. Main Office - Port City 2.
+West Coast Hub - Los Angeles 3. East Coast Hub - New York</p>
+<p><strong>Editing Locations:</strong> 1. Locate the location you want
+to edit 2. Update: - <strong>City</strong>: Location name/title -
+<strong>Address</strong>: Full street address - <strong>Phone</strong>:
+Contact number - <strong>Email</strong>: Location-specific email 3.
+Ensure all information is accurate 4. Click <strong>“Save All
+Changes”</strong></p>
+<hr />
+<h2 id="saving-changes">Saving Changes</h2>
+<h3 id="the-save-process">The Save Process</h3>
+<p><strong>CRITICAL: Changes are NOT automatically saved!</strong></p>
+<h4 id="step-1-make-your-edits">Step 1: Make Your Edits</h4>
+<ul>
+<li>Edit any content across all sections</li>
+<li>You can make multiple changes before saving</li>
+<li>There’s no autosave, so be careful not to close the page</li>
+</ul>
+<h4 id="step-2-click-save-all-changes">Step 2: Click “Save All
+Changes”</h4>
+<ol type="1">
+<li>Click the green <strong>“Save All Changes”</strong> button in the
+header</li>
+<li>The system processes all your edits</li>
+<li>A download dialog will appear</li>
+</ol>
+<h4 id="step-3-download-the-updated-file">Step 3: Download the Updated
+File</h4>
+<ul>
+<li>A file named <code>site-content.json</code> will be downloaded</li>
+<li>This file contains all your changes</li>
+<li>Save it to a known location on your computer</li>
+</ul>
+<h4 id="step-4-replace-the-original-file">Step 4: Replace the Original
+File</h4>
+<p><strong>IMPORTANT: This is the most critical step!</strong></p>
+<ol type="1">
+<li>Locate the downloaded <code>site-content.json</code> file</li>
+<li>Navigate to the <code>content/</code> folder in your website
+directory</li>
+<li><strong>Replace</strong> the existing <code>site-content.json</code>
+with your downloaded file</li>
+<li>Confirm the replacement</li>
+</ol>
+<h4 id="step-5-verify-changes">Step 5: Verify Changes</h4>
+<ol type="1">
+<li>Click the <strong>“View Website”</strong> button or refresh your
+website</li>
+<li>Navigate to the pages you edited</li>
+<li>Verify your changes appear correctly</li>
+</ol>
+<h4 id="step-6-publish-changes">Step 6: Publish Changes</h4>
+<p>After replacing the file locally, your changes will be visible on
+your local website. To publish changes to the live website, contact your
+technical administrator.</p>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="content-guidelines">Content Guidelines</h3>
+<ol type="1">
+<li><strong>Keep It Concise</strong>
+<ul>
+<li>Website visitors prefer brief, scannable content</li>
+<li>Use 1-2 sentences for descriptions</li>
+<li>Save detailed information for dedicated pages</li>
+</ul></li>
+<li><strong>Be Consistent</strong>
+<ul>
+<li>Use similar tone and style across all sections</li>
+<li>Keep formatting consistent (capitalization, punctuation)</li>
+<li>Maintain brand voice throughout</li>
+</ul></li>
+<li><strong>Proofread</strong>
+<ul>
+<li>Always review changes before saving</li>
+<li>Check for spelling and grammar errors</li>
+<li>Verify phone numbers and email addresses</li>
+</ul></li>
+<li><strong>Test Links</strong>
+<ul>
+<li>Ensure all URLs work correctly</li>
+<li>Use proper anchor links (e.g., <code>#about</code>,
+<code>#services</code>)</li>
+<li>Test navigation after publishing</li>
+</ul></li>
+</ol>
+<h3 id="image-best-practices">Image Best Practices</h3>
+<ol type="1">
+<li><strong>Optimization</strong>
+<ul>
+<li>Compress images before uploading</li>
+<li>Target file sizes under 500KB</li>
+<li>Use WebP format for best compression</li>
+</ul></li>
+<li><strong>Naming</strong>
+<ul>
+<li>Use descriptive filenames: <code>office-exterior.jpg</code> not
+<code>IMG_1234.jpg</code></li>
+<li>Use lowercase and hyphens: <code>team-photo.jpg</code></li>
+<li>Avoid spaces and special characters</li>
+</ul></li>
+<li><strong>Alt Text</strong>
+<ul>
+<li>Always provide descriptive alt text</li>
+<li>Helps with SEO and accessibility</li>
+<li>Example: “Four Winds warehouse facility” not “Image 1”</li>
+</ul></li>
+</ol>
+<h3 id="security-best-practices">Security Best Practices</h3>
+<ol type="1">
+<li><strong>Password Management</strong>
+<ul>
+<li>Change the default admin password</li>
+<li>Use a strong, unique password</li>
+<li>Don’t share credentials</li>
+</ul></li>
+<li><strong>Session Management</strong>
+<ul>
+<li>Log out when finished</li>
+<li>Don’t leave the dashboard open unattended</li>
+<li>Sessions expire after 24 hours</li>
+</ul></li>
+<li><strong>Backup</strong>
+<ul>
+<li>Keep backup copies of <code>site-content.json</code></li>
+<li>Save dated versions: <code>site-content-2026-01-30.json</code></li>
+<li>Store backups in a secure location</li>
+</ul></li>
+</ol>
+<h3 id="workflow-best-practices">Workflow Best Practices</h3>
+<ol type="1">
+<li><strong>Make a Backup First</strong>
+<ul>
+<li>Before major edits, download current
+<code>site-content.json</code></li>
+<li>Save as backup:
+<code>site-content-backup-YYYY-MM-DD.json</code></li>
+<li>If something goes wrong, you can restore</li>
+</ul></li>
+<li><strong>Edit in Batches</strong>
+<ul>
+<li>Group related changes together</li>
+<li>Test after each major update</li>
+<li>Don’t make too many changes at once</li>
+</ul></li>
+<li><strong>Test Before Publishing</strong>
+<ul>
+<li>View changes locally first</li>
+<li>Check all affected pages</li>
+<li>Verify on mobile devices</li>
+</ul></li>
+<li><strong>Document Changes</strong>
+<ul>
+<li>Keep notes of what you changed</li>
+<li>Maintain a change log for major updates</li>
+<li>Document the date and purpose of each update</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues-and-solutions">Common Issues and Solutions</h3>
+<h4 id="problem-cant-log-in">Problem: Can’t Log In</h4>
+<p><strong>Symptoms</strong>: Login button doesn’t work or shows
+error</p>
+<p><strong>Solutions:</strong> 1. Verify credentials: - Username:
+<code>admin</code> - Password: <code>fourwinds2024</code> 2. Check caps
+lock is off 3. Clear browser cache and cookies 4. Try a different
+browser 5. Check browser console for errors (F12)</p>
+<hr />
+<h4 id="problem-changes-not-showing-on-website">Problem: Changes Not
+Showing on Website</h4>
+<p><strong>Symptoms</strong>: Edited content doesn’t appear after
+saving</p>
+<p><strong>Common Causes and Solutions:</strong></p>
+<ol type="1">
+<li><strong>Didn’t Replace the JSON File</strong>
+<ul>
+<li>Most common issue!</li>
+<li>Download <code>site-content.json</code> from admin</li>
+<li>Replace file at: <code>/content/site-content.json</code></li>
+<li>Verify file was actually replaced</li>
+</ul></li>
+<li><strong>Browser Cache</strong>
+<ul>
+<li>Hard refresh: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)</li>
+<li>Clear browser cache completely</li>
+<li>Try incognito/private browsing mode</li>
+</ul></li>
+<li><strong>JSON Syntax Error</strong>
+<ul>
+<li>Invalid JSON prevents content from loading</li>
+<li>Validate JSON at: https://jsonlint.com/</li>
+<li>Check for missing commas, quotes, or brackets</li>
+</ul></li>
+</ol>
+<hr />
+<h4 id="problem-image-not-displaying">Problem: Image Not Displaying</h4>
+<p><strong>Symptoms</strong>: Broken image icon or blank space</p>
+<p><strong>Solutions:</strong></p>
+<ol type="1">
+<li><strong>Check File Path</strong>
+<ul>
+<li>Verify path is correct: <code>images/your-image.jpg</code></li>
+<li>Path is case-sensitive: <code>Images/</code> ≠
+<code>images/</code></li>
+<li>Use forward slashes: <code>/</code> not <code>\</code></li>
+</ul></li>
+<li><strong>Check File Exists</strong>
+<ul>
+<li>Verify image is actually in the specified folder</li>
+<li>Check filename matches exactly (case-sensitive)</li>
+</ul></li>
+<li><strong>Check File Format</strong>
+<ul>
+<li>Use supported formats: JPG, PNG, WebP, GIF</li>
+<li>Avoid unsupported formats: TIFF, BMP, PSD</li>
+</ul></li>
+<li><strong>Check File Size</strong>
+<ul>
+<li>Very large files may fail to load</li>
+<li>Compress images under 2MB</li>
+</ul></li>
+</ol>
+<hr />
+<h4 id="problem-dashboard-looks-broken">Problem: Dashboard Looks
+Broken</h4>
+<p><strong>Symptoms</strong>: Layout issues, missing buttons, strange
+formatting</p>
+<p><strong>Solutions:</strong></p>
+<ol type="1">
+<li><strong>Clear Browser Cache</strong>
+<ul>
+<li>Hard refresh: Ctrl+Shift+R or Cmd+Shift+R</li>
+<li>Clear all cached files</li>
+<li>Restart browser</li>
+</ul></li>
+<li><strong>Check CSS File</strong>
+<ul>
+<li>Verify <code>/admin/css/admin.css</code> exists</li>
+<li>File shouldn’t be modified</li>
+<li>Restore from backup if necessary</li>
+</ul></li>
+<li><strong>Browser Compatibility</strong>
+<ul>
+<li>Use modern browser (Chrome, Firefox, Safari, Edge)</li>
+<li>Update browser to latest version</li>
+<li>Avoid Internet Explorer</li>
+</ul></li>
+</ol>
+<hr />
+<h4 id="problem-save-button-not-working">Problem: Save Button Not
+Working</h4>
+<p><strong>Symptoms</strong>: Clicking save doesn’t download file or
+shows error</p>
+<p><strong>Solutions:</strong></p>
+<ol type="1">
+<li><strong>Check Browser Permissions</strong>
+<ul>
+<li>Allow downloads in browser settings</li>
+<li>Disable download blocking extensions</li>
+<li>Check popup blocker isn’t active</li>
+</ul></li>
+<li><strong>JavaScript Errors</strong>
+<ul>
+<li>Open browser console (F12)</li>
+<li>Look for red error messages</li>
+<li>Screenshot errors for troubleshooting</li>
+</ul></li>
+<li><strong>Session Expired</strong>
+<ul>
+<li>Log out and log back in</li>
+<li>Session expires after 24 hours</li>
+<li>Make changes again and save</li>
+</ul></li>
+</ol>
+<hr />
+<h4 id="problem-content-appears-jumbled">Problem: Content Appears
+Jumbled</h4>
+<p><strong>Symptoms</strong>: Text from different sections mixed
+together, wrong order</p>
+<p><strong>Solutions:</strong></p>
+<ol type="1">
+<li><strong>Check JSON Structure</strong>
+<ul>
+<li>The JSON file may be corrupted</li>
+<li>Restore from backup</li>
+<li>Re-enter content carefully</li>
+</ul></li>
+<li><strong>Paragraph Separators</strong>
+<ul>
+<li>For “Our Story”, use <code>|</code> between paragraphs</li>
+<li>Example: <code>Para 1|Para 2|Para 3</code></li>
+<li>Don’t use <code>|</code> inside sentences</li>
+</ul></li>
+</ol>
+<hr />
+<h4 id="problem-cant-delete-item">Problem: Can’t Delete Item</h4>
+<p><strong>Symptoms</strong>: Delete button doesn’t work or item
+reappears</p>
+<p><strong>Solutions:</strong></p>
+<ol type="1">
+<li><strong>Confirm Deletion</strong>
+<ul>
+<li>Click delete and confirm in popup</li>
+<li>Wait for item to disappear</li>
+<li>Click “Save All Changes” button</li>
+<li>Download and replace JSON file</li>
+</ul></li>
+<li><strong>JavaScript Error</strong>
+<ul>
+<li>Check browser console for errors</li>
+<li>Try refreshing and deleting again</li>
+<li>Log out and back in</li>
+</ul></li>
+</ol>
+<hr />
+<h3 id="getting-help">Getting Help</h3>
+<p>If you encounter issues not covered in this guide:</p>
+<ol type="1">
+<li><strong>Check Browser Console</strong>
+<ul>
+<li>Press F12 to open developer tools</li>
+<li>Look for errors (red text) in Console tab</li>
+<li>Screenshot any errors</li>
+</ul></li>
+<li><strong>Verify File Structure</strong>
+<ul>
+<li>Ensure all files are in correct locations</li>
+<li>Check that folders haven’t been renamed</li>
+<li>Verify permissions allow reading/writing</li>
+</ul></li>
+<li><strong>Restore from Backup</strong>
+<ul>
+<li>Use a backup copy of <code>site-content.json</code></li>
+<li>Replace the current file</li>
+<li>Test again</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="quick-reference">Quick Reference</h2>
+<h3 id="login-details">Login Details</h3>
+<ul>
+<li><strong>URL</strong>: <code>/admin/index.html</code></li>
+<li><strong>Username</strong>: <code>admin</code></li>
+<li><strong>Password</strong>: <code>fourwinds2024</code></li>
+<li><strong>Session Duration</strong>: 24 hours</li>
+</ul>
+<h3 id="file-locations">File Locations</h3>
+<ul>
+<li><strong>Admin Dashboard</strong>:
+<code>/admin/dashboard.html</code></li>
+<li><strong>Content File</strong>:
+<code>/content/site-content.json</code></li>
+<li><strong>Images Folder</strong>: <code>/images/</code> and
+<code>/content/</code></li>
+</ul>
+<h3 id="important-reminders">Important Reminders</h3>
+<ol type="1">
+<li>Always <strong>Save All Changes</strong> before leaving</li>
+<li>Always <strong>Replace</strong> the JSON file after saving</li>
+<li>Always <strong>Test</strong> changes before publishing</li>
+<li>Always <strong>Backup</strong> before major edits</li>
+<li>Always <strong>Log out</strong> when finished</li>
+</ol>
+<hr />
+<h2 id="version-history">Version History</h2>
+<ul>
+<li><strong>v2.0</strong> (January 30, 2026) - Removed technical
+deployment instructions and support contacts</li>
+<li><strong>v1.0</strong> (January 30, 2026) - Initial guide
+creation</li>
+</ul>
+<hr />
+<p><strong>End of Guide</strong></p>
+<p>Thank you for using the Four Winds Worldwide Admin Dashboard!</p>
+</body>
+</html>
