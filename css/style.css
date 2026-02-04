@@ -358,7 +358,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tagline Banner Section */
 .tagline-banner {
-    padding: 1.5rem 0;
+    padding: 0.75rem 0;
     background: linear-gradient(135deg, #FF5722 0%, #1e293b 100%);
     text-align: center;
 }
@@ -1173,7 +1173,7 @@ h1, h2, h3, h4, h5, h6 {
 
     /* Tagline Banner Mobile */
     .tagline-banner {
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
 
     .main-tagline {
