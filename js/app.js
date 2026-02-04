@@ -104,7 +104,7 @@ function populateHome() {
     const removalsGrid = document.getElementById('removals-grid');
     removalsGrid.innerHTML = home.removals.services.map((service, index) => {
         // Map each card to its corresponding icon image
-        const iconImages = ['8.png', '6.png', 'content/house.png', 'peticon.png', 'car.png', 'content/projcargo.png'];
+        const iconImages = ['8.png', '6.png', 'content/PHOTO-2026-01-31-13-00-24.jpg', 'peticon.png', 'car.png', 'content/projcargo.png'];
         const iconContent = `<img src="${iconImages[index].startsWith('content/') ? iconImages[index] : 'images/' + iconImages[index]}" alt="${service.title}" class="icon-image">`;
 
         // Map each card to its corresponding service page
@@ -221,7 +221,7 @@ function populateFooter() {
 function initializeServicePages() {
     if (!siteContent) return;
 
-    // Household Goods Moving
+    // Warehousing
     if (siteContent.householdGoods) {
         const elem = document.getElementById('household-goods-content');
         if (elem) elem.textContent = siteContent.householdGoods.content;
