@@ -24,22 +24,19 @@
         "hasDropdown": true,
         "submenu": [
           {
+            "id": "international",
+            "label": "International",
+            "url": "#international"
+          },
+          {
+            "id": "domestic",
+            "label": "Domestic",
+            "url": "#domestic"
+          },
+          {
             "id": "household-goods",
             "label": "Warehousing",
-            "url": "#household-goods",
-            "hasSubmenu": true,
-            "submenu": [
-              {
-                "id": "international",
-                "label": "International",
-                "url": "#international"
-              },
-              {
-                "id": "domestic",
-                "label": "Domestic",
-                "url": "#domestic"
-              }
-            ]
+            "url": "#household-goods"
           },
           {
             "id": "cars-automobile",
