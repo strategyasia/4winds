@@ -175,7 +175,7 @@ function populateContact() {
     document.getElementById('contact-title').textContent = contact.title;
     document.getElementById('contact-subtitle').textContent = contact.subtitle;
     document.getElementById('company-phone').textContent = company.phone;
-    document.getElementById('company-email').textContent = company.email;
+    document.getElementById('company-email').innerHTML = company.email;
     document.getElementById('company-address').textContent = company.address;
     document.getElementById('office-hours').textContent = contact.office_hours;
 
@@ -189,7 +189,7 @@ function populateFooter() {
     document.getElementById('footer-company-name').textContent = company.name;
     document.getElementById('footer-tagline').textContent = company.tagline;
     document.getElementById('footer-phone').textContent = company.phone;
-    document.getElementById('footer-email').textContent = company.email;
+    document.getElementById('footer-email').innerHTML = company.email;
     document.getElementById('footer-company').textContent = company.name;
 }
 
