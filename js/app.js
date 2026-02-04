@@ -254,7 +254,7 @@ function initializeServicePages() {
     // Project Cargo
     if (siteContent.projectCargo) {
         const elem = document.getElementById('project-cargo-content');
-        if (elem) elem.textContent = siteContent.projectCargo.content;
+        if (elem) elem.innerHTML = siteContent.projectCargo.content;
     }
 }
 
