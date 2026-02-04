@@ -356,6 +356,24 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
 }
 
+/* Tagline Banner Section */
+.tagline-banner {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    text-align: center;
+}
+
+.main-tagline {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.3;
+}
+
 /* Removals Solutions Section - Clean Luxury Design */
 .removals-section {
     padding: 6rem 0;
@@ -1153,6 +1171,16 @@ h1, h2, h3, h4, h5, h6 {
 
     .pet-services-info {
         padding: 1.5rem;
+    }
+
+    /* Tagline Banner Mobile */
+    .tagline-banner {
+        padding: 2rem 0;
+    }
+
+    .main-tagline {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
     }
 
     .pet-services-info h3 {
