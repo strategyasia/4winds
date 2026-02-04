@@ -224,7 +224,7 @@ function initializeServicePages() {
     // Warehousing
     if (siteContent.householdGoods) {
         const elem = document.getElementById('household-goods-content');
-        if (elem) elem.textContent = siteContent.householdGoods.content;
+        if (elem) elem.innerHTML = siteContent.householdGoods.content;
     }
 
     // International Moving
