@@ -268,6 +268,14 @@ function showSection(sectionName) {
         }
     });
 
+    // Close mobile menu if open
+    const navMenu = document.querySelector('.nav-menu');
+    if (navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        document.querySelector('.mobile-menu-toggle').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
     // Scroll to top
     window.scrollTo({
         top: 0,
@@ -278,7 +286,16 @@ function showSection(sectionName) {
 // Mobile menu toggle
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
-    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    const toggle = document.querySelector('.mobile-menu-toggle');
+    navMenu.classList.toggle('active');
+    toggle.classList.toggle('active');
+
+    // Prevent body scroll when menu is open
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
 }
 
 // Mobile dropdown toggle - called from navigation items
