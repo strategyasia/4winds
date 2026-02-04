@@ -25,7 +25,7 @@
         "submenu": [
           {
             "id": "household-goods",
-            "label": "Household Goods Moving",
+            "label": "Warehousing",
             "url": "#household-goods",
             "hasSubmenu": true,
             "submenu": [
@@ -115,9 +115,9 @@
           "description": "Local and nationwide moving services with professional packing and delivery"
         },
         {
-          "icon": "📦",
-          "title": "Household Goods Moving",
-          "description": "Complete household relocation services for both international and domestic moves"
+          "icon": "content/PHOTO-2026-01-31-13-00-24.jpg",
+          "title": "Warehousing",
+          "description": "Secure storage and warehousing solutions for your goods with climate control and 24/7 monitoring"
         },
         {
           "icon": "🐾",
@@ -310,9 +310,9 @@
     ]
   },
   "householdGoods": {
-    "title": "Household Goods Moving",
-    "subtitle": "International & Domestic",
-    "content": "We make relocating your home simple—whether you're moving across town or to another country. Our team professionally packs, ships, and delivers your belongings with care, handling everything from furniture to fragile heirlooms. For international moves, we manage customs paperwork and import regulations so you don't have to."
+    "title": "Warehousing",
+    "subtitle": "Secure Storage Solutions",
+    "content": "Our state-of-the-art warehousing facilities provide secure, climate-controlled storage for your goods. Whether you need short-term or long-term storage, we offer flexible solutions with 24/7 security monitoring, inventory management, and easy access to your belongings whenever you need them."
   },
   "international": {
     "title": "International Moving",
