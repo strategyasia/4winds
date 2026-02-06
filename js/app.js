@@ -341,26 +341,56 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Handle contact form submission
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault();
 
-    // Get form data
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
+    const form = event.target;
+    const submitBtn = document.getElementById('submit-btn');
+    const statusDiv = document.getElementById('form-status');
 
-    // Here you would typically send the data to a server
-    // For this basic version, we'll just show a success message
-    alert('Thank you for your message! We will contact you soon.');
+    // Disable submit button and show loading
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    statusDiv.style.display = 'none';
 
-    // Reset form
-    event.target.reset();
+    try {
+        // Get form data
+        const formData = new FormData(form);
 
-    // In a real application, you would do something like:
-    // fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data)
-    // });
+        // Send to FormSubmit
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            // Show success message
+            statusDiv.innerHTML = '<p style="color: #10b981; background: #d1fae5; padding: 1rem; border-radius: 8px; text-align: center;">✓ Thank you! Your message has been sent successfully. We will contact you soon.</p>';
+            statusDiv.style.display = 'block';
+
+            // Reset form
+            form.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 5000);
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        // Show error message
+        statusDiv.innerHTML = '<p style="color: #ef4444; background: #fee2e2; padding: 1rem; border-radius: 8px; text-align: center;">✗ Sorry, there was an error sending your message. Please email us directly at edgar@fourwindsinternatinal.com</p>';
+        statusDiv.style.display = 'block';
+        console.error('Form submission error:', error);
+    } finally {
+        // Re-enable submit button
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+    }
 }
 
 // Image Slider Functionality
