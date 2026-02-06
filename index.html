@@ -199,32 +199,39 @@
 
                 <div class="contact-form-card">
                     <h3>Send Us a Message</h3>
-                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/edgar@fourwindsinternatinal.com" method="POST" onsubmit="handleFormSubmit(event)">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Four Winds Worldwide">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://fourwindsintlgroup.com/#contact">
+
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number">
+                            <input type="tel" name="phone" placeholder="Phone Number">
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <select name="service" required>
                                 <option value="">Select Service</option>
-                                <option value="international-moving">International Moving</option>
-                                <option value="domestic-moving">Domestic Moving</option>
-                                <option value="household-goods">Warehousing</option>
-                                <option value="cars-automobile">Cars/Automobile Shipping</option>
-                                <option value="pet-relocation">Pet Relocation</option>
-                                <option value="project-cargo">Project Cargo</option>
-                                <option value="other">Other</option>
+                                <option value="International Moving">International Moving</option>
+                                <option value="Domestic Moving">Domestic Moving</option>
+                                <option value="Warehousing">Warehousing</option>
+                                <option value="Cars/Automobile Shipping">Cars/Automobile Shipping</option>
+                                <option value="Pet Relocation">Pet Relocation</option>
+                                <option value="Project Cargo">Project Cargo</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div id="form-status" style="margin-bottom: 1rem; display: none;"></div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
