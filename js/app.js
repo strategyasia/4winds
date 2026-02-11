@@ -383,7 +383,7 @@ async function handleFormSubmit(event) {
         }
     } catch (error) {
         // Show error message
-        statusDiv.innerHTML = '<p style="color: #ef4444; background: #fee2e2; padding: 1rem; border-radius: 8px; text-align: center;">✗ Sorry, there was an error sending your message. Please email us directly at edgar@fourwindsinternatinal.com</p>';
+        statusDiv.innerHTML = '<p style="color: #ef4444; background: #fee2e2; padding: 1rem; border-radius: 8px; text-align: center;">✗ Sorry, there was an error sending your message. Please email us directly at edgar@fourwindsinternational.com</p>';
         statusDiv.style.display = 'block';
         console.error('Form submission error:', error);
     } finally {
