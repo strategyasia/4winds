@@ -357,16 +357,20 @@ async function handleFormSubmit(event) {
         // Get form data
         const formData = new FormData(form);
 
-        // Send to FormSubmit
+        // Send to FormSubmit with proper configuration
         const response = await fetch(form.action, {
             method: 'POST',
             body: formData,
             headers: {
                 'Accept': 'application/json'
-            }
+            },
+            mode: 'cors'
         });
 
-        if (response.ok) {
+        // Check if response is OK
+        const responseData = await response.json().catch(() => null);
+
+        if (response.ok || response.status === 200) {
             // Show success message
             statusDiv.innerHTML = '<p style="color: #10b981; background: #d1fae5; padding: 1rem; border-radius: 8px; text-align: center;">✓ Thank you! Your message has been sent successfully. We will contact you soon.</p>';
             statusDiv.style.display = 'block';
@@ -379,13 +383,23 @@ async function handleFormSubmit(event) {
                 statusDiv.style.display = 'none';
             }, 5000);
         } else {
-            throw new Error('Form submission failed');
+            throw new Error(responseData?.message || 'Form submission failed');
         }
     } catch (error) {
-        // Show error message
-        statusDiv.innerHTML = '<p style="color: #ef4444; background: #fee2e2; padding: 1rem; border-radius: 8px; text-align: center;">✗ Sorry, there was an error sending your message. Please email us directly at edgar@fourwindsinternational.com</p>';
-        statusDiv.style.display = 'block';
         console.error('Form submission error:', error);
+
+        // Show error message with detailed info
+        statusDiv.innerHTML = `<p style="color: #ef4444; background: #fee2e2; padding: 1rem; border-radius: 8px; text-align: center;">
+            ✗ There was an error sending your message.<br>
+            Please email us directly at: <a href="mailto:edgar@fourwindsinternational.com" style="color: #dc2626; font-weight: bold;">edgar@fourwindsinternational.com</a>
+        </p>`;
+        statusDiv.style.display = 'block';
+
+        // Log detailed error for debugging
+        console.error('Error details:', {
+            message: error.message,
+            error: error
+        });
     } finally {
         // Re-enable submit button
         submitBtn.disabled = false;
