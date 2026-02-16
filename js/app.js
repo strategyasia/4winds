@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 500);
 });
 
-// Handle contact form submission
+// Handle contact form submission with Web3Forms
 async function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -357,20 +357,15 @@ async function handleFormSubmit(event) {
         // Get form data
         const formData = new FormData(form);
 
-        // Send to FormSubmit with proper configuration
-        const response = await fetch(form.action, {
+        // Send to Web3Forms API
+        const response = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            },
-            mode: 'cors'
+            body: formData
         });
 
-        // Check if response is OK
-        const responseData = await response.json().catch(() => null);
+        const data = await response.json();
 
-        if (response.ok || response.status === 200) {
+        if (data.success) {
             // Show success message
             statusDiv.innerHTML = '<p style="color: #10b981; background: #d1fae5; padding: 1rem; border-radius: 8px; text-align: center;">✓ Thank you! Your message has been sent successfully. We will contact you soon.</p>';
             statusDiv.style.display = 'block';
@@ -383,7 +378,7 @@ async function handleFormSubmit(event) {
                 statusDiv.style.display = 'none';
             }, 5000);
         } else {
-            throw new Error(responseData?.message || 'Form submission failed');
+            throw new Error(data.message || 'Form submission failed');
         }
     } catch (error) {
         console.error('Form submission error:', error);

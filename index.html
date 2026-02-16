@@ -199,13 +199,12 @@
 
                 <div class="contact-form-card">
                     <h3>Send Us a Message</h3>
-                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/edgar@fourwindsinternational.com" method="POST" onsubmit="handleFormSubmit(event)">
-                        <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_subject" value="New Contact Form Submission - Four Winds Worldwide">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_autoresponse" value="Thank you for contacting Four Winds Worldwide! We have received your message and will respond within 24 hours.">
-                        <input type="hidden" name="_next" value="https://fourwindsintlgroup.com/#contact">
+                    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
+                        <!-- Web3Forms Configuration -->
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+                        <input type="hidden" name="subject" value="New Contact Form Submission - Four Winds Worldwide">
+                        <input type="hidden" name="from_name" value="Four Winds Website">
+                        <input type="hidden" name="redirect" value="https://fourwindsintlgroup.com/#contact">
 
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
