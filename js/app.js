@@ -386,7 +386,7 @@ async function handleFormSubmit(event) {
         // Show error message with detailed info
         statusDiv.innerHTML = `<p style="color: #ef4444; background: #fee2e2; padding: 1rem; border-radius: 8px; text-align: center;">
             ✗ There was an error sending your message.<br>
-            Please email us directly at: <a href="mailto:edgar@fourwindsinternational.com" style="color: #dc2626; font-weight: bold;">edgar@fourwindsinternational.com</a>
+            Please email us directly at: <a href="mailto:edgar@fourwindsintlgroup.com" style="color: #dc2626; font-weight: bold;">edgar@fourwindsintlgroup.com</a>
         </p>`;
         statusDiv.style.display = 'block';
 
