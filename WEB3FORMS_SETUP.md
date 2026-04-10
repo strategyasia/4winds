@@ -4,7 +4,7 @@
 
 1. **Visit:** https://web3forms.com
 
-2. **Enter your email:** `edgar@fourwindsinternational.com`
+2. **Enter your email:** `edgar@fourwindsintlgroup.com`
 
 3. **Click "Create Access Key"**
 
@@ -45,7 +45,7 @@
 
 ## Email Settings
 
-Emails will be sent to: `edgar@fourwindsinternational.com`
+Emails will be sent to: `edgar@fourwindsintlgroup.com`
 
 Form submissions include:
 - Name
@@ -59,7 +59,7 @@ Form submissions include:
 After adding your access key:
 1. Visit https://fourwindsintlgroup.com/#contact
 2. Fill out and submit the form
-3. Check `edgar@fourwindsinternational.com` inbox
+3. Check `edgar@fourwindsintlgroup.com` inbox
 4. Email should arrive within 1 minute
 
 ## Support

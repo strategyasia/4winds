@@ -214,7 +214,7 @@ The dashboard is organized into collapsible sections, each managing different pa
 - **Phone Number**: Main contact number
   - Format: `(+60)12202-2719`
 - **Email Address**: Primary contact email
-  - Current: `edgar@fourwindsinternatinal.com`
+  - Current: `edgar@fourwindsintlgroup.com`
 - **Address**: Physical business address
   - Current: `16-1, Jalan Kasuarina 8, Bandar Botanic, 41200 Klang, Selangor, Malaysia`
 
