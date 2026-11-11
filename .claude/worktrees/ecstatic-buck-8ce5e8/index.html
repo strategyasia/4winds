@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Winds Worldwide - Global Shipping Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Four Winds Worldwide Logo" class="logo-image">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#about" class="nav-link" onclick="showSection('about')">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-link" onclick="return false;">Our Services <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#international" onclick="showSection('international')">International</a></li>
+                            <li><a href="#domestic" onclick="showSection('domestic')">Domestic</a></li>
+                            <li><a href="#household-goods" onclick="showSection('household-goods')">Warehousing</a></li>
+                            <li><a href="#cars-automobile" onclick="showSection('cars-automobile')">Cars/Automobile</a></li>
+                            <li><a href="#pets-relocation" onclick="showSection('pets-relocation')">Pets Relocation</a></li>
+                            <li><a href="#project-cargo" onclick="showSection('project-cargo')">Project Cargo</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact Us</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home-section" class="section active">
+        <!-- Hero Section with Slider -->
+        <div class="hero">
+            <div class="slider-wrapper">
+                <div class="slide">
+                    <img src="images/old-vintage-compass-ancient-map.jpg" alt="Global Logistics">
+                </div>
+                <div class="slide">
+                    <img src="images/traveling-items-arrangement-top-view.jpg" alt="Shipping Solutions">
+                </div>
+            </div>
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title" id="hero-title"></h1>
+                    <p class="hero-subtitle" id="hero-subtitle"></p>
+                    <a href="#contact" class="btn btn-primary" id="hero-cta" onclick="showSection('contact')"></a>
+                </div>
+            </div>
+            <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+            <div class="slider-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <!-- Removals Solutions Section -->
+        <div class="removals-section">
+            <div class="container">
+                <div class="removals-header">
+                    <h2 class="section-title" id="removals-title"></h2>
+                    <p class="removals-subtitle" id="removals-subtitle"></p>
+                </div>
+                <div class="removals-grid" id="removals-grid">
+                    <!-- Removals services will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats">
+            <div class="container">
+                <div class="stats-grid" id="stats-grid">
+                    <!-- Stats will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Background Section -->
+        <div class="map-section">
+            <div class="map-overlay"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" class="section">
+        <!-- Hero Section with Single Image -->
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/traveling-items-arrangement-top-view.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="about-title"></h1>
+                    <p class="mission" id="about-mission"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="about-story">
+                <h2 class="section-title">Our Story</h2>
+                <div id="about-story" class="story-content"></div>
+            </div>
+
+            <div class="values">
+                <h2 class="section-title">Our Values</h2>
+                <div class="values-grid" id="values-grid">
+                    <!-- Values will be loaded dynamically -->
+                </div>
+            </div>
+
+            <div class="team">
+                <h2 class="section-title" id="team-title"></h2>
+                <div class="team-grid" id="team-grid">
+                    <!-- Team members will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="section">
+        <!-- Hero Section with Single Image -->
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/traveling-items-arrangement-top-view.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="contact-title"></h1>
+                    <p class="contact-subtitle" id="contact-subtitle"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <strong>Phone</strong>
+                            <p id="company-phone"></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p id="company-email"></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Address</strong>
+                            <p id="company-address"></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">🕐</span>
+                        <div>
+                            <strong>Office Hours</strong>
+                            <p id="office-hours"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleFormSubmit(event)">
+                        <!-- Web3Forms Configuration -->
+                        <input type="hidden" name="access_key" value="e7cf8d6e-3446-46d3-b926-5dc8b48dd20b">
+                        <input type="hidden" name="subject" value="New Contact Form Submission - Four Winds Worldwide">
+                        <input type="hidden" name="from_name" value="Four Winds Website">
+                        <input type="hidden" name="redirect" value="https://fourwindsintlgroup.com/#contact">
+
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="">Select Service</option>
+                                <option value="International Moving">International Moving</option>
+                                <option value="Domestic Moving">Domestic Moving</option>
+                                <option value="Warehousing">Warehousing</option>
+                                <option value="Cars/Automobile Shipping">Cars/Automobile Shipping</option>
+                                <option value="Pet Relocation">Pet Relocation</option>
+                                <option value="Project Cargo">Project Cargo</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <div id="form-status" style="margin-bottom: 1rem; display: none;"></div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="contact-map-section">
+                <div class="map-overlay"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warehousing Section -->
+    <section id="household-goods-section" class="section">
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/traveling-items-arrangement-top-view.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="household-goods-title">Warehousing</h1>
+                    <p class="mission" id="household-goods-subtitle">Secure Storage Solutions</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-description" id="household-goods-content"></div>
+
+                <!-- Image Showcase -->
+                <div class="service-showcase">
+                    <h2 class="section-title">Our Warehousing Services</h2>
+                    <div class="showcase-grid">
+                        <div class="showcase-item">
+                            <img src="content/household/PHOTO-2026-01-31-13-00-35.jpg" alt="Warehousing - Professional Storage">
+                        </div>
+                        <div class="showcase-item">
+                            <img src="content/household/PHOTO-2026-01-31-13-01-04.jpg" alt="Warehousing - Secure Facilities">
+                        </div>
+                        <div class="showcase-item">
+                            <img src="content/household/PHOTO-2026-01-31-13-03-25.jpg" alt="Warehousing - Safe Storage">
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-primary" onclick="showSection('contact')" style="display: block; max-width: 300px; margin: 40px auto; text-align: center;">Request Warehousing Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Moving Section -->
+    <section id="international-section" class="section">
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/old-vintage-compass-ancient-map.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="international-title">International Moving</h1>
+                    <p class="mission" id="international-subtitle">Worldwide Relocation Services</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-description" id="international-content"></div>
+
+                <!-- Image Showcase -->
+                <div class="service-showcase">
+                    <h2 class="section-title">How We Handle Your International Move</h2>
+                    <div class="showcase-grid showcase-grid-no-captions">
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-1.jpg" alt="International Moving - Professional Packing">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-2.jpg" alt="International Moving - Secure Loading">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-3.jpg" alt="International Moving - Quality Materials">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-4.jpg" alt="International Moving - Customs Documentation">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-5.jpg" alt="International Moving - Furniture Protection">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-6.jpg" alt="International Moving - Safe Transport">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-10.jpg" alt="International Moving - Protected Items">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-11.jpg" alt="International Moving - Organized Delivery">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-12.jpg" alt="International Moving - Unpacking Service">
+                        </div>
+                    </div>
+
+                    <div class="pet-services-info">
+                        <h3>Our International Moving Services Include:</h3>
+                        <ul>
+                            <li>✓ Professional packing services with high-quality materials</li>
+                            <li>✓ Secure loading and container setup for safe transit</li>
+                            <li>✓ Complete customs clearance and documentation handling</li>
+                            <li>✓ Furniture protection, wrapping, and specialized crating</li>
+                            <li>✓ Door-to-door international shipping services</li>
+                            <li>✓ Comprehensive insurance coverage for your belongings</li>
+                            <li>✓ Import regulations and compliance management</li>
+                            <li>✓ Dedicated move coordinator throughout the process</li>
+                            <li>✓ Network of 1000+ certified agents worldwide</li>
+                            <li>✓ 25+ years average moving experience of our team</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="#contact" class="btn btn-primary" onclick="showSection('contact')">Request International Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domestic Moving Section -->
+    <section id="domestic-section" class="section">
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/traveling-items-arrangement-top-view.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="domestic-title">Domestic Moving</h1>
+                    <p class="mission" id="domestic-subtitle">Local & Nationwide Moving Services</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-description" id="domestic-content"></div>
+
+                <!-- Image Showcase -->
+                <div class="service-showcase">
+                    <h2 class="section-title">Our Domestic Moving Process</h2>
+                    <div class="showcase-grid showcase-grid-no-captions">
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-7.jpg" alt="Domestic Moving - Packing Service">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-8.jpg" alt="Domestic Moving - Loading">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-1.jpg" alt="Domestic Moving - Professional Packing">
+                        </div>
+                        <div class="showcase-item-no-caption">
+                            <img src="images/services/moving/moving-9.jpg" alt="Domestic Moving - Furniture Handling">
+                        </div>
+                    </div>
+
+                    <div class="pet-services-info">
+                        <h3>Our Domestic Moving Services Include:</h3>
+                        <ul>
+                            <li>✓ Expert packing services for local and nationwide moves</li>
+                            <li>✓ Careful loading and professional furniture handling</li>
+                            <li>✓ High-quality packing materials and supplies</li>
+                            <li>✓ Items protected during transit with secure wrapping</li>
+                            <li>✓ Furniture disassembly and reassembly services</li>
+                            <li>✓ Organized and timely delivery to your new location</li>
+                            <li>✓ Optional unpacking and setup services</li>
+                            <li>✓ Flexible scheduling to fit your timeline</li>
+                            <li>✓ Local and long-distance moving expertise</li>
+                            <li>✓ Experienced team with 25+ years in the industry</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="#contact" class="btn btn-primary" onclick="showSection('contact')">Request Domestic Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars/Automobile Section -->
+    <section id="cars-automobile-section" class="section">
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/traveling-items-arrangement-top-view.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="cars-automobile-title">Vehicle & Automobile Shipping</h1>
+                    <p class="mission" id="cars-automobile-subtitle">Cars, Motorcycles & Specialty Vehicles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-description" id="cars-automobile-content"></div>
+
+                <!-- Image Showcase -->
+                <div class="service-showcase">
+                    <h2 class="section-title">Professional Vehicle Shipping Services</h2>
+                    <div class="showcase-grid">
+                        <div class="showcase-item">
+                            <img src="images/services/cars/car-1.webp" alt="Vehicle Shipping - Auto Transport">
+                            <p>Professional Auto Transport Services</p>
+                        </div>
+                        <div class="showcase-item">
+                            <img src="images/services/cars/car-2.webp" alt="Vehicle Shipping - Kuala Lumpur Services">
+                            <p>Best Car Shipping Services in Kuala Lumpur</p>
+                        </div>
+                        <div class="showcase-item">
+                            <img src="images/services/cars/car-3.webp" alt="Vehicle Shipping - Container Loading">
+                            <p>Secure Container Loading & Protection</p>
+                        </div>
+                        <div class="showcase-item">
+                            <img src="images/services/cars/car-4.webp" alt="Vehicle Shipping - International Transport">
+                            <p>International Car Shipment Worldwide</p>
+                        </div>
+                    </div>
+
+                    <div class="pet-services-info">
+                        <h3>Our Vehicle Shipping Services Include:</h3>
+                        <ul>
+                            <li>✓ Open and enclosed carrier options for domestic transport</li>
+                            <li>✓ International vehicle shipping to any destination</li>
+                            <li>✓ Complete customs clearance and compliance documentation</li>
+                            <li>✓ Pre-shipment vehicle inspection and condition report</li>
+                            <li>✓ Specialized handling for luxury and collectible vehicles</li>
+                            <li>✓ Motorcycles, boats, and specialty vehicle transport</li>
+                            <li>✓ Comprehensive insurance coverage throughout transit</li>
+                            <li>✓ Door-to-door pickup and delivery services</li>
+                            <li>✓ Real-time tracking and status updates</li>
+                            <li>✓ Professional vehicle preparation and securing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="#contact" class="btn btn-primary" onclick="showSection('contact')">Request Vehicle Shipping Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pets Relocation Section -->
+    <section id="pets-relocation-section" class="section">
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/traveling-items-arrangement-top-view.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="pets-relocation-title">Pet Relocation</h1>
+                    <p class="mission" id="pets-relocation-subtitle">Safe Travel for Your Furry Family</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-description" id="pets-relocation-content"></div>
+
+                <!-- Image Showcase -->
+                <div class="service-showcase">
+                    <h2 class="section-title">Safe & Comfortable Pet Travel</h2>
+                    <div class="showcase-grid showcase-grid-pets">
+                        <div class="showcase-item">
+                            <img src="images/services/pets/pet-1.jpg" alt="Pet Relocation - Safe Travel Crates">
+                            <p>IATA-Approved Travel Crates</p>
+                        </div>
+                        <div class="showcase-item">
+                            <img src="images/services/pets/pet-2.jpg" alt="Pet Relocation - Comfortable Journey">
+                            <p>Comfortable & Stress-Free Journey</p>
+                        </div>
+                    </div>
+                    <div class="pet-services-info">
+                        <h3>What We Handle For Your Pet:</h3>
+                        <ul>
+                            <li>✓ Health certificates and veterinary documentation</li>
+                            <li>✓ Required vaccinations and microchipping</li>
+                            <li>✓ Import permits and country-specific requirements</li>
+                            <li>✓ IATA-compliant travel crates and bedding</li>
+                            <li>✓ Flight bookings and airline coordination</li>
+                            <li>✓ Quarantine arrangements when required</li>
+                            <li>✓ Door-to-door pet transport services</li>
+                            <li>✓ 24/7 support throughout the journey</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <a href="#contact" class="btn btn-primary" onclick="showSection('contact')">Request Pet Relocation Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Cargo Section -->
+    <section id="project-cargo-section" class="section">
+        <div class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/old-vintage-compass-ancient-map.jpg'); background-size: cover; background-position: center;">
+            <div class="container hero-overlay">
+                <div class="hero-content">
+                    <h1 class="page-title" id="project-cargo-title">Project Cargo</h1>
+                    <p class="mission" id="project-cargo-subtitle">Heavy Lift & Oversized Shipments</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tagline Section -->
+        <div class="tagline-banner">
+            <div class="container">
+                <h2 class="main-tagline">We Move The People Who Move The World</h2>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="service-detail-content">
+                <div class="service-description" id="project-cargo-content"></div>
+                <div class="cta-section">
+                    <a href="#contact" class="btn btn-primary" onclick="showSection('contact')">Request Project Cargo Quote</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Cargo Completed Section -->
+        <div id="project-cargo-completed-section">
+        <div class="container">
+            <div class="completed-projects-header">
+                <h2 class="section-title">PROJECT CARGO COMPLETED</h2>
+                <p class="section-subtitle">Our Successfully Executed Major Projects</p>
+            </div>
+
+            <!-- Project 1: Philips Lights Malaysia -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">01</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Philips Lights Malaysia</h3>
+                        <p class="project-description">Moving of the entire plant equipment from Penang to Shenzhen, China.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(1, 0)">
+                        <img src="https://via.placeholder.com/800x600/1e40af/ffffff?text=Philips+Malaysia+Image+1" alt="Philips Malaysia Project 1">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(1, 1)">
+                        <img src="https://via.placeholder.com/800x600/1e40af/ffffff?text=Philips+Malaysia+Image+2" alt="Philips Malaysia Project 2">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(1, 2)">
+                        <img src="https://via.placeholder.com/800x600/1e40af/ffffff?text=Philips+Malaysia+Image+3" alt="Philips Malaysia Project 3">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Read-Rite Malaysia -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">02</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Read-Rite Malaysia</h3>
+                        <p class="project-description">Moving of the entire plant equipment from Penang to Thailand, Philippines & California.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(2, 0)">
+                        <img src="content/read-rite/PHOTO-2026-01-27-13-46-29.jpg" alt="Read-Rite Malaysia Project 1">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(2, 1)">
+                        <img src="content/read-rite/PHOTO-2026-01-27-13-46-30.jpg" alt="Read-Rite Malaysia Project 2">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(2, 2)">
+                        <img src="content/read-rite/PHOTO-2026-01-27-13-46-30 2.jpg" alt="Read-Rite Malaysia Project 3">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Read-Rite Philippines -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">03</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Read-Rite Philippines</h3>
+                        <p class="project-description">Moving of the entire plant equipment from Philippines to Thailand & California.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(3, 0)">
+                        <img src="https://via.placeholder.com/800x600/1e40af/ffffff?text=Read-Rite+Philippines+Image+1" alt="Read-Rite Philippines Project 1">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(3, 1)">
+                        <img src="https://via.placeholder.com/800x600/1e40af/ffffff?text=Read-Rite+Philippines+Image+2" alt="Read-Rite Philippines Project 2">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(3, 2)">
+                        <img src="https://via.placeholder.com/800x600/1e40af/ffffff?text=Read-Rite+Philippines+Image+3" alt="Read-Rite Philippines Project 3">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Mandarin Hotel KLCC -->
+            <div class="completed-project">
+                <div class="project-header">
+                    <div class="project-number">04</div>
+                    <div class="project-info">
+                        <h3 class="project-title">MANDARIN HOTEL (KLCC)</h3>
+                        <p class="project-description">Logistics provider for the routing, storage & installation of the entire hotel equipment, fittings and fixtures.</p>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item" onclick="openGalleryModal(4, 0)">
+                        <img src="content/klcc/16029947-exterior-mandarin-oriental-kuala-lumpur.webp" alt="Mandarin Hotel KLCC Exterior">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(4, 1)">
+                        <img src="content/klcc/20191206_466044.webp" alt="Mandarin Hotel KLCC Interior">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openGalleryModal(4, 2)">
+                        <img src="content/klcc/maxresdefault.jpg" alt="Mandarin Hotel KLCC Facilities">
+                        <div class="gallery-overlay">
+                            <span class="view-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal" onclick="closeGalleryModal()">
+        <span class="modal-close">&times;</span>
+        <button class="modal-nav modal-prev" onclick="event.stopPropagation(); changeModalImage(-1)">&#10094;</button>
+        <img class="modal-content" id="modal-image" onclick="event.stopPropagation()">
+        <button class="modal-nav modal-next" onclick="event.stopPropagation(); changeModalImage(1)">&#10095;</button>
+        <div class="modal-caption" id="modal-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 id="footer-company-name"></h4>
+                    <p id="footer-tagline"></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                        <li><a href="#services" onclick="showSection('services')">Our Services</a></li>
+                        <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p id="footer-phone"></p>
+                    <p id="footer-email"></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span id="footer-company"></span>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

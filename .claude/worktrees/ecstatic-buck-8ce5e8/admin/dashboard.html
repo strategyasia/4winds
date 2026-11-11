@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Four Winds Worldwide Admin</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="header-content">
+            <div class="header-logo">
+                <img src="../images/logo.jpg" alt="Four Winds Worldwide Logo">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-success" id="save-all-btn">💾 Save All Changes</button>
+                <a href="../index.html" class="btn btn-secondary" target="_blank">👁 View Website</a>
+                <button class="btn btn-secondary" id="logout-btn">🚪 Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Save Indicator -->
+    <div class="save-indicator" id="save-indicator">
+        <span>✓</span>
+        <span>Changes saved successfully!</span>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Content Management</h1>
+        <p class="dashboard-subtitle">Edit your website content below and click "Save All Changes" when done.</p>
+
+        <div class="content-sections">
+            <!-- Navigation Menu Management -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>📋 Navigation Menu</h2>
+                    <button class="btn btn-primary btn-sm" onclick="addMenuItem()">➕ Add Menu Item</button>
+                </div>
+                <div class="section-body">
+                    <div id="menu-items-list">
+                        <!-- Menu items will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Management -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>🖼 Slider Images</h2>
+                    <button class="btn btn-primary btn-sm" onclick="addSliderImage()">➕ Add Slider Image</button>
+                </div>
+                <div class="section-body">
+                    <div id="slider-images-list">
+                        <!-- Slider images will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Library -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>📷 Image Library</h2>
+                    <div>
+                        <input type="file" id="image-upload-input" accept="image/*" style="display:none;" onchange="handleImageUpload(event)">
+                        <button class="btn btn-primary btn-sm" onclick="document.getElementById('image-upload-input').click()">⬆️ Upload Image</button>
+                    </div>
+                </div>
+                <div class="section-body">
+                    <div id="image-library-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem;">
+                        <!-- Images will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Information -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>🏢 Company Information</h2>
+                </div>
+                <div class="section-body">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="company-name">Company Name</label>
+                            <input type="text" id="company-name" />
+                        </div>
+                        <div class="form-field">
+                            <label for="company-tagline">Tagline</label>
+                            <input type="text" id="company-tagline" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="company-phone">Phone Number</label>
+                            <input type="text" id="company-phone" />
+                        </div>
+                        <div class="form-field">
+                            <label for="company-email">Email Address</label>
+                            <input type="email" id="company-email" />
+                        </div>
+                    </div>
+                    <div class="form-field full-width">
+                        <label for="company-address">Address</label>
+                        <input type="text" id="company-address" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Hero Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>🏠 Home - Hero Section</h2>
+                </div>
+                <div class="section-body">
+                    <div class="form-field">
+                        <label for="hero-title">Hero Title</label>
+                        <input type="text" id="hero-title" />
+                    </div>
+                    <div class="form-field">
+                        <label for="hero-subtitle">Hero Subtitle</label>
+                        <input type="text" id="hero-subtitle" />
+                    </div>
+                    <div class="form-field">
+                        <label for="hero-cta">Call to Action Button Text</label>
+                        <input type="text" id="hero-cta" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Removals Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>📦 Home - Removals Solutions</h2>
+                </div>
+                <div class="section-body">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="removals-title">Section Title</label>
+                            <input type="text" id="removals-title" />
+                        </div>
+                        <div class="form-field">
+                            <label for="removals-subtitle">Section Subtitle</label>
+                            <input type="text" id="removals-subtitle" />
+                        </div>
+                    </div>
+                    <div class="services-list" id="services-list">
+                        <!-- Services will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Home Stats Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>📊 Home - Statistics</h2>
+                </div>
+                <div class="section-body">
+                    <div id="stats-list">
+                        <!-- Stats will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>ℹ About Us Page</h2>
+                </div>
+                <div class="section-body">
+                    <div class="form-field">
+                        <label for="about-title">Page Title</label>
+                        <input type="text" id="about-title" />
+                    </div>
+                    <div class="form-field">
+                        <label for="about-mission">Mission Statement</label>
+                        <textarea id="about-mission" rows="3"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label for="about-story">Our Story (Use | to separate paragraphs)</label>
+                        <textarea id="about-story" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Values Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>💎 About - Our Values</h2>
+                </div>
+                <div class="section-body">
+                    <div id="values-list">
+                        <!-- Values will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Team Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>👥 About - Our Team</h2>
+                </div>
+                <div class="section-body">
+                    <div class="form-field">
+                        <label for="team-title">Team Section Title</label>
+                        <input type="text" id="team-title" />
+                    </div>
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--dark-color);">Team Members</h3>
+                    <div id="team-list">
+                        <!-- Team members will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>📞 Contact Us Page</h2>
+                </div>
+                <div class="section-body">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="contact-title">Page Title</label>
+                            <input type="text" id="contact-title" />
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-subtitle">Page Subtitle</label>
+                            <input type="text" id="contact-subtitle" />
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="office-hours">Office Hours</label>
+                        <input type="text" id="office-hours" />
+                    </div>
+
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--dark-color);">Office Locations</h3>
+                    <div id="locations-list">
+                        <!-- Locations will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
