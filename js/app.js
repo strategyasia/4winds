@@ -1,19 +1,102 @@
-// Domain & SSL enforcement
+// ── Security Layer ───────────────────────────────────────────────────────────
 (function(){
-  var _allowed=["fourwindsintlgroup.com","www.fourwindsintlgroup.com"],
-      _host=window.location.hostname.toLowerCase(),
-      _proto=window.location.protocol;
-  if(_proto!=="https:"&&_host!=="localhost"&&_host!=="127.0.0.1"){
-    window.location.replace("https://"+window.location.host+window.location.pathname+window.location.search+window.location.hash);
-    return;
+  var _DOMAINS  = ["fourwindsintlgroup.com","www.fourwindsintlgroup.com"];
+  var _TOKEN    = "fw-sa-2026-7x9q";
+  var _LOCKED   = false;
+
+  // Lock screen HTML
+  var _LOCK_HTML = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Access Denied</title>'
+    +'<style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d0d0d;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif}'
+    +'.w{text-align:center;color:#fff;padding:2rem}.ic{font-size:5rem;display:block;margin-bottom:1rem}'
+    +'h1{color:#c0392b;font-size:1.8rem;margin-bottom:.75rem}p{color:#888;font-size:.95rem;line-height:1.8}strong{color:#ccc}'
+    +'</style></head><body><div class="w"><span class="ic">&#128274;</span>'
+    +'<h1>Site Integrity Violation</h1>'
+    +'<p>This website has been tampered with or accessed<br>from an unauthorized location.<br><br>'
+    +'Licensed for use on <strong>fourwindsintlgroup.com</strong> only.<br>Access has been permanently blocked.</p>'
+    +'</div></body></html>';
+
+  function _lock(code){
+    if(_LOCKED) return;
+    _LOCKED = true;
+    try{ document.open(); document.write(_LOCK_HTML); document.close(); }catch(e){}
+    throw new Error(code);
   }
-  if(_allowed.indexOf(_host)===-1){
-    document.open();
-    document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Access Denied</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d0d0d;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif}div{text-align:center;color:#fff;padding:2rem}.icon{font-size:5rem;display:block;margin-bottom:1rem}h1{color:#c0392b;font-size:1.8rem;margin-bottom:.75rem}p{color:#888;font-size:.95rem;line-height:1.6}strong{color:#ccc}</style></head><body><div><span class="icon">&#128274;</span><h1>Access Restricted</h1><p>This website is licensed exclusively for<br><strong>fourwindsintlgroup.com</strong><br><br>Unauthorized domain detected.<br>Access has been blocked.</p></div></body></html>');
-    document.close();
-    throw new Error("0x403: Unauthorized domain");
+
+  function _verify(){
+    // 1. Domain check
+    var h = window.location.hostname.toLowerCase();
+    if(_DOMAINS.indexOf(h)===-1 && h!=="localhost" && h!=="127.0.0.1"){
+      _lock("0x403: Unauthorized domain"); return;
+    }
+    // 2. HTTPS check
+    if(window.location.protocol!=="https:" && h!=="localhost" && h!=="127.0.0.1"){
+      _lock("0x405: SSL required"); return;
+    }
+    // 3. Powered-by element integrity
+    var pb = document.getElementById("_fw_pb");
+    if(!pb || pb.getAttribute("data-auth")!==_TOKEN){
+      _lock("0x401: Powered-by element removed or modified"); return;
+    }
+    // 4. Domain-lock script integrity
+    var ls = document.querySelector("script[data-lock='true'][data-auth='"+_TOKEN+"']");
+    if(!ls){
+      _lock("0x402: Security module removed or modified"); return;
+    }
+  }
+
+  // ── Initial domain/SSL check (runs before DOM is ready) ──
+  (function(){
+    var h=window.location.hostname.toLowerCase();
+    if(window.location.protocol!=="https:" && h!=="localhost" && h!=="127.0.0.1"){
+      window.location.replace("https://"+window.location.host+window.location.pathname+window.location.search+window.location.hash);
+      return;
+    }
+    if(_DOMAINS.indexOf(h)===-1 && h!=="localhost" && h!=="127.0.0.1"){
+      _lock("0x403: Unauthorized domain");
+    }
+  })();
+
+  // ── MutationObserver: immediate tamper detection ──
+  var _obs = new MutationObserver(function(mutations){
+    for(var i=0;i<mutations.length;i++){
+      var m=mutations[i];
+      // Detect removal of critical nodes
+      for(var j=0;j<m.removedNodes.length;j++){
+        var n=m.removedNodes[j];
+        if(!n.getAttribute) continue;
+        if(n.id==="_fw_pb" || n.getAttribute("data-auth")===_TOKEN || n.getAttribute("data-lock")==="true"){
+          _lock("0x401: Critical element removed");
+        }
+      }
+      // Detect attribute tampering on critical nodes
+      if(m.type==="attributes"){
+        var t=m.target;
+        if(t && (t.id==="_fw_pb"||t.getAttribute("data-lock")==="true")){
+          _lock("0x401: Critical element modified");
+        }
+      }
+    }
+    _verify();
+  });
+
+  // ── Start watching after DOM loads ──
+  function _startGuard(){
+    _verify();
+    _obs.observe(document.documentElement,{
+      childList:true, subtree:true,
+      attributes:true, attributeFilter:["data-auth","data-lock","id","style","class"]
+    });
+    // Periodic re-check every 2 seconds
+    setInterval(_verify, 2000);
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded", _startGuard);
+  } else {
+    _startGuard();
   }
 })();
+// ── End Security Layer ───────────────────────────────────────────────────────
 
 // Global content variable
 let siteContent = null;
