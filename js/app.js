@@ -1,3 +1,20 @@
+// Domain & SSL enforcement
+(function(){
+  var _allowed=["fourwindsintlgroup.com","www.fourwindsintlgroup.com"],
+      _host=window.location.hostname.toLowerCase(),
+      _proto=window.location.protocol;
+  if(_proto!=="https:"&&_host!=="localhost"&&_host!=="127.0.0.1"){
+    window.location.replace("https://"+window.location.host+window.location.pathname+window.location.search+window.location.hash);
+    return;
+  }
+  if(_allowed.indexOf(_host)===-1){
+    document.open();
+    document.write('<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Access Denied</title><style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d0d0d;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif}div{text-align:center;color:#fff;padding:2rem}.icon{font-size:5rem;display:block;margin-bottom:1rem}h1{color:#c0392b;font-size:1.8rem;margin-bottom:.75rem}p{color:#888;font-size:.95rem;line-height:1.6}strong{color:#ccc}</style></head><body><div><span class="icon">&#128274;</span><h1>Access Restricted</h1><p>This website is licensed exclusively for<br><strong>fourwindsintlgroup.com</strong><br><br>Unauthorized domain detected.<br>Access has been blocked.</p></div></body></html>');
+    document.close();
+    throw new Error("0x403: Unauthorized domain");
+  }
+})();
+
 // Global content variable
 let siteContent = null;
 
